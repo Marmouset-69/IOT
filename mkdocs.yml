@@ -16,3 +16,5 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
   
+extra_css:
+    - stylesheets/extra.css
