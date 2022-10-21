@@ -79,16 +79,16 @@ sensor:
 ## Flash ESP
 USB to ESP-01 Adapter Board
 
-![adaptater-USB](Images/adaptater-USB.png)
+![adaptater-USB](Images/adaptater-USB.png){ width="200" }
 
 ### Home assistant
 
 To be sure to correctly flash ESP make a .bin file. Use "Manual download"
 
-![Manual download](Images/Manual-dowload.png)
+![Manual download](Images/Manual-dowload.png){ width="300" }
 
 ## ESPHome-Flasher
 
 Use "ESPHome-Flasher" to flash the ESP
 
-![ESPHome logo](Images/esphome-flasher.png){ width="300" }
+![ESPHome logo](Images/esphome-flasher.png){ width="200" }
