@@ -1,5 +1,37 @@
 # ESP-01S + DHT22 ( work! )
-![ESP-01S](Images/ESP-01S.JPG)
+![ESP-01S](Images/ESP-01S.JPG){ width="200" }
+
+## Steps
+(more details below)
+
+- **Add** a new ESP device - **esp8266**
+
+![ESP-8266](Images/2022-10-21_19-15-31-jmve3.png){ width="300" }
+![ESP-Legacy](Images/2022-10-21_20-40-36-72n4c.png){ width="300" }
+
+- copy the **code** (see below)
+- **install** - "Manual download"
+
+![Manual dowload](Images/2022-10-21_20-26-54-6cr0y.png){ width="500" }
+
+- plug the esp01 on "**USB to ESP-01 Adapter** Board" (see below)
+- flash the esp01 with **ESPHome-flasher**
+- plug the **esp01 on the DHT22 board**
+- use **LanScan** to find the new devise
+
+![LanScan](Images/2022-10-21_18-55-21-ph0h2.png){ width="600" }
+
+- go to your router and configure a **static IP** for this new device
+
+![LanScan](Images/2022-10-21_20-52-41-f4m7a.png){ width="600" }
+
+- unplug / plug the device to **update** the new IP
+- go to integration of Homeassistant and **configure** the new integration
+
+![LanScan](Images/2022-10-21_20-56-09-lri2o.png){ width="400" }
+
+![LanScan](Images/2022-10-21_20-56-21-c0rbw.png){ width="200" }
+![LanScan](Images/2022-10-21_20-56-49-lgmhm.png){ width="200" }
 
 ## esphome code
 
@@ -28,27 +60,35 @@ wifi:
     password: "WXjJplTlkNPa"
 
 captive_portal:
-
 sensor:
-  - platform: dht
-    # model: DHT22 don't work with the ESP-01S
+    - platform: dht
+    # model: DHT22 Don't work
     model: AM2302
     pin: GPIO02
     temperature:
-      name: "Temperature esp01-dht22-02"
+        name: "esp01-dht22-04 Temperature"
+        filters:
+            - offset: 0.0
     humidity:
-      name: "Humidite esp01-dht22-02"
-    update_interval: 300s
+        name: "esp01-dht22-04 Humidite"
+        filters:
+            - offset: 0.0
+    update_interval: 600s
 ```
 
 ## Flash ESP
-### adaptateur de téléchargement USB vers ESP8266 Breakout ESP-01 ESP-01S
+USB to ESP-01 Adapter Board
 
 ![adaptater-USB](Images/adaptater-USB.png)
 
 ### Home assistant
+
 To be sure to correctly flash ESP make a .bin file. Use "Manual download"
+
 ![Manual download](Images/Manual-dowload.png)
 
+## ESPHome-Flasher
+
 Use "ESPHome-Flasher" to flash the ESP
-![ESPHome logo](Images/ESPHome-logo.png)
+
+![ESPHome logo](Images/esphome-flasher.png){ width="300" }
