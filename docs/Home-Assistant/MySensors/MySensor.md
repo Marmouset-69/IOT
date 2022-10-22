@@ -1,38 +1,46 @@
-# MySensors
+# MySensors integration
+
+![MySensors-wire](Images/MySensors-logo.png){ width="200" }
+
+[https://www.home-assistant.io/integrations/mysensors/](https://www.home-assistant.io/integrations/mysensors/°)
 
 ## Resources
 
-https://forum.jeedom.com/viewtopic.php?t=5381
-Wemos D1: https://opendomotech.com/mysensors-gateway-wifi-jeedom-domoticz/
-Log parser: https://www.mysensors.org/build/parser
+[https://forum.jeedom.com/viewtopic.php?t=5381](https://forum.jeedom.com/viewtopic.php?t=5381)
+
+[https://opendomotech.com/mysensors-gateway-wifi-jeedom-domoticz/](https://opendomotech.com/mysensors-gateway-wifi-jeedom-domoticz/)
+
+Log parser: [https://www.mysensors.org/build/parser](https://www.mysensors.org/build/parser])
 
 
 ## Build the Gateway
 
 Go to : https://opendomotech.com/mysensors-gateway-wifi-jeedom-domoticz/
-<img src="Images/MySensors-wire.jpg" width="600">
+
+![MySensors-wire](Images/MySensors-wire.jpg){ width="600" }
 
 ### Add to the Arduino IDE MySensor
 
 The CH240 driver for generic Arduino Nano is also installed in OS X Catalina
 
-<img src="Images/MySensors-220109141153.jpg" width="600">
-<img src="Images/Mysensors-IDE.png" width="600">
+![MySensors-wire](Images/MySensors-220109141153.jpg){ width="600" }
+
+![MySensors-wire](Images/Mysensors-IDE.png){ width="600" }
 
 ### First sketch
 
 Go to /Files/Examples/MySensors/GatewaySerial
 
-<img src="Images/MySensors-gateway-code-1.png" width="200">
-<img src="Images/MySensors-gateway-code-2.png" width="200">
-<img src="Images/MySensors-gateway-code-3.png" width="200">
+![MySensors-wire](Images/MySensors-gateway-code-1.png){ width="200" }
+![MySensors-wire](Images/MySensors-gateway-code-2.png){ width="200" }
+![MySensors-wire](Images/MySensors-gateway-code-3.png){ width="200" }
 
 Get arduino code (see end of page)
 
 Carrefull : 
 - baud: 115200
 
-<img src="Images/MySensors-220109114628.jpg" width="800">
+![MySensors-wire](Images/MySensors-220109114628.jpg){ width="700" }
 
 ## Add DHT22 sensor
 ### Temparature and Humidity DHT22
@@ -53,13 +61,15 @@ Example (Capteur de luminosité): https://opendomotech.com/creer-capteurs-mysens
 
 Aller sur : https://www.home-assistant.io/integrations/mysensors/
 
-<img src="Images/MySensors-220109114039.jpg" width="300">
-<img src="Images/MySensors-220109135153.jpg" width="300">
-<img src="Images/MySensors-220109135253.jpg" width="300">
+![MySensors-wire](Images/MySensors-220109114039.jpg){ width="300" }
+
+![MySensors-wire](Images/MySensors-220109135153.jpg){ width="300" }
+
+![MySensors-wire](Images/MySensors-220109135253.jpg){ width="300" }
 
 You must find a new integration
 
-<img src="Images/MySensors-220109140747.jpg" width="300">
+![MySensors-wire](Images/MySensors-220109140747.jpg){ width="300" }
 
 
 

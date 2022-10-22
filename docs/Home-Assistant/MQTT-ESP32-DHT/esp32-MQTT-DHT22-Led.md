@@ -6,15 +6,15 @@ You can find the same project without Led [here](esp32-DHT22.md)
 ## USB port connection
 See (FAQ)[../FAQ] if any problem
 
-<img src="Images/port.png" width="200">
+![ESP-8266](Images/port.png){ width="230" }
 
 ## Wire DHT22
 
-<img src="Images/ESP32-DHT22-LED.png" width="400">
+![ESP-8266](Images/ESP32-DHT22-LED.png){ width="230" }
 
 ## Code
 
-<img src="Images/upload_error.png" width="800">
+![ESP-8266](Images/upload_error.png){ width="800" }
 
 **Attention: to upload the code you MUST deconnect the 'vin' pin.**
 
@@ -189,15 +189,15 @@ void loop() {
 
 Terminal output
 
-<img src="Images/terminale-MQTT-led.png" width="800">
+![ESP-8266](Images/terminale-MQTT-led.png){ width="800" }
 
 Test with MQTT Explorer
 
-<img src="Images/MQTT_Explorer.png" width="800">
+![ESP-8266](Images/MQTT_Explorer.png){ width="800" }
 
-<img src="Images/MQTT_Explorer_2.png" width="800">
+![ESP-8266](Images/MQTT_Explorer_2.png){ width="800" }
 
-<img src="Images/terminal-output-messages.png" width="800">
+![ESP-8266](Images/terminal-output-messages.png){ width="800" }
 
 ## Home Assistant
 
@@ -231,11 +231,11 @@ switch:
 
 New entitie
 
-<img src="Images/new_entitie.png" width="400">
+![ESP-8266](Images/new_entitie.png){ width="400" }
 
 Lovelace
 
-<img src="Images/lovelace.png" width="400">
-<br>
-<br>
-<img src="Images/lovelace_2.png" width="400">
+![ESP-8266](Images/lovelace.png){ width="400" }
+
+![ESP-8266](Images/lovelace_2.png){ width="400" }
+
