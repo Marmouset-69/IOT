@@ -2,7 +2,7 @@
 
 ## Extension with a Led
 
-You can find the same project without Led [here](esp32-DHT22.md)
+You can find the same project without Led [here](esp32-MQTT-DHT22.md)
 ## USB port connection
 See (FAQ)[../FAQ] if any problem
 
