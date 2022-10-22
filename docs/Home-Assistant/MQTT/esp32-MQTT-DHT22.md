@@ -1,24 +1,24 @@
-# DHT22 + ESP32 + MQTT + Home Assistant
+# ESP32 + DHT22
 
 ## USB port connection
-See (FAQ)[../FAQ] if any problem
 
-<img src="Images/port.png" width="200">
+![](Images/port.png){ width="400" }
 
 ## Wire DHT22
 
-<img src="Images/IMG_8335.jpg" width="200"><img src="Images/ESP32-DHT22.png" width="200">
+![](Images/IMG_8335.jpg){ width="300" }
+![](Images/ESP32-DHT22.png){ width="300" }
 
 ## Code
 ### Test code to check pins
 
 Use "DHTtester.ino" example code given with DHT22 lib.
 
-<img src="Images/output_basic.png" width="400">
+![](Images/output_basic.png){ width="400" }
 
 
 ### MQTT Code
-Voir : https://diyi0t.com/microcontroller-to-raspberry-pi-wifi-mqtt-communication/
+Voir : [https://diyi0t.com/microcontroller-to-raspberry-pi-wifi-mqtt-communication/](https://diyi0t.com/microcontroller-to-raspberry-pi-wifi-mqtt-communication/)
 
 ```
 #include "DHT.h"
@@ -138,13 +138,14 @@ void loop() {
 ```
 Here is the output
 
-<img src="Images/output_MQTT.png" width="800">
+![](Images/output_MQTT.png){ width="650" }
 
 # MQTT Explorer
 For testing MQTT, use "MQTT Explorer" (Apple Store)
 
-<img src="Images/MQTT-explorer-1.png" width="500">
-<img src="Images/MQTT-explorer-2.png" width="500">
+![](Images/MQTT-explorer-1.png){ width="650" }
+
+![](Images/MQTT-explorer-2.png){ width="650" }
 
 # Home Assistant
 ## Configuration
@@ -167,15 +168,15 @@ sensor:
 ## Test result
 Appareils et services :
 
-<img src="Images/HA-MQTT-1.png" width="400"><
+![](Images/HA-MQTT-1.png){ width="400" }
 
 Mosiquitto
 
-<img src="Images/HA-MQTT-2.png" width="200"><br>
+![](Images/HA-MQTT-2.png){ width="400" }
 
 MQTT settings
 
-<img src="Images/HA-MQTT-3.png" width="400">
+![](Images/HA-MQTT-3.png){ width="400" }
 
 ## Add to Lovelace
 New entities appears into entities list

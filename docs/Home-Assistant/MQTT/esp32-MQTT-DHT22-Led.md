@@ -1,4 +1,4 @@
-# ESP32 + DHT22 + LED +  MQTT + Home Assistant
+#  ESP32 + DHT22 + LED
 
 ## Extension with a Led
 
