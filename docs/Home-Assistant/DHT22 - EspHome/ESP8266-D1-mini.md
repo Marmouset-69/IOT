@@ -2,7 +2,7 @@
 
 ## Config with ESPHome
 
-<img src="Images/IMG_4026.jpg" width="400">
+![](Images/Images-ESP8266-D1-mini/IMG_4026.jpg){ width="300" }
 
 ```
 esphome:
@@ -38,7 +38,7 @@ sensor:
     temperature:
       name: "esp8266-d1-mini-2 Température"
       filters:
-        #offset: 0.1      
+        #offset: 0.1
     humidity:
       name: "esp8266-d1-mini-2  Humidité"
     update_interval: 600s

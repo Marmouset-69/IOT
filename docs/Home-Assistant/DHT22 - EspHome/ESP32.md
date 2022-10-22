@@ -1,4 +1,4 @@
-# Problems with ESP32
+# ESP32
 
 ESP32 Troubleshooting Guide: See https://randomnerdtutorials.com/esp32-troubleshooting-guide/
 

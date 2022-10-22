@@ -1,16 +1,16 @@
 # ESP32-CAM Installation 
 
-<img src="Images/2022-09-24_10-57-04.png" width="200"/>
+![](Images/2022-09-24_10-57-04.png){ width="200" }
 
-<img src="Images/2022-09-24_10-57-03.png" width="120"/>
+![](Images/2022-09-24_10-57-03.png){ width="100" }
 
-<img src="Images/2022-09-24_10-57-30.png" width="300"/>
+![](Images/2022-09-24_10-57-30.png){ width="300" }
 
-<img src="Images/2022-09-24_10-57-39.png" width="300"/>
+![](Images/2022-09-24_10-57-39.png){ width="300" }
 
-<img src="Images/2022-09-24_10-57-50.png" width="200"/>
+![](Images/2022-09-24_10-57-50.png){ width="200" }
 
-<img src="Images/2022-09-24_10-58-20.png" width="300"/>
+![](Images/2022-09-24_10-58-20.png){ width="300" }
 
 Edit the code :
 ```
@@ -73,37 +73,39 @@ switch:
 ```
 Select **Manual download**
 
-<img src="Images/2022-09-24_16-31-14.png" width="400"/>
+![](Images/2022-09-24_16-31-14.png){ width="300" }
 
-<img src="Images/2022-09-24_16-34-35-mlttu.png" width="500"/>
+![](Images/2022-09-24_16-34-35-mlttu.png){ width="500" }
 
-<img src="Images/2022-09-24_16-38-16-yfosd.png" width="500"/>
+![](Images/2022-09-24_16-38-16-yfosd.png){ width="500" }
 
-> WARNING: 
-If the ESP is not visible on the serial port, it may be due to the cable, you must try another one
+!!! WARNING
+    If the ESP is not visible on the serial port, it may be due to the cable, you must try another one
 
-<img src="Images/IMG_3976.JPG" width="200"/>
+    ![](Images/IMG_3976.JPG){ width="300" }
 
->WARNING: If an error appears, it means that the ESP is not in "write" mode. You must then press the "IO0" button THEN connect the ESP and flash it. 
+!!! WARNING
+    If an error appears, it means that the ESP is not in "write" mode. You must then press the "IO0" button THEN connect the ESP and flash it.
 
-<img src="Images/IMG_3975.jpg" width="300"/>
+    ![](Images/IMG_3975.jpg){ width="250" }
 
-<img src="Images/2022-09-24_17-16-04-wshpx.png" width="500"/>
+
+![](Images/2022-09-24_17-16-04-wshpx.png){ width="500" }
 
 >Disconnect then reconnect the ESP
 
-<img src="Images/2022-09-24_17-18-33-076n7.png" width="300"/>
-.
-<img src="Images/2022-09-24_17-21-33-46yb4.png" width="200"/>
-.
-<img src="Images/2022-09-24_17-21-41-m2uyz.png" width="300"/>
+![](Images/2022-09-24_17-18-33-076n7.png){ width="300" }
 
-<img src="Images/2022-09-24_17-21-51-oyfpp.png" width="300"/>
+![](Images/2022-09-24_17-21-33-46yb4.png){ width="300" }
 
-<img src="Images/2022-09-24_17-22-04-kssti.png" width="300"/>
+![](Images/2022-09-24_17-21-41-m2uyz.png){ width="300" }
 
-<img src="Images/2022-09-24_17-22-14-me3k0.png" width="300"/>
+![](Images/2022-09-24_17-21-51-oyfpp.png){ width="300" }
 
-<img src="Images/2022-09-24_17-22-40-a70lt.png" width="300"/>
+![](Images/2022-09-24_17-22-04-kssti.png){ width="300" }
 
-<img src="Images/2022-09-24_17-24-21-2psnt.png" width="300"/>
+![](Images/2022-09-24_17-22-14-me3k0.png){ width="300" }
+
+![](Images/2022-09-24_17-22-40-a70lt.png){ width="300" }
+
+![](Images/2022-09-24_17-24-21-2psnt.png){ width="300" }
