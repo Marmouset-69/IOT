@@ -1,4 +1,4 @@
-# Comparison of DHT22 accuracy depending on the processor used
+# DHT22 accuracy depending on the processor used
 
 ## esp32
 The precision of the ESP 32 processor is not great.The accuracy of the ESP32 processor is not great, there can be an error of more than 3°C.
