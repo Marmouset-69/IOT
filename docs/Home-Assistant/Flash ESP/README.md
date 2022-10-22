@@ -52,11 +52,14 @@ sensor:
 
 <img src="Images/2022-10-09_10-09-49-h4082.png" width="500"/>
 
-### Bug:
-Could not open serial port
-<img src="Images/2022-10-09_10-27-42-7c6gd.png" width="450"/>
 
-ESP is not in flash mode -> press boot button when you falsh
-<img src="Images/2022-10-09_10-30-32-mrxj3.png" width="450"/>
-<img src="Images/2022-10-09_10-30-51-i8pkx.png" width="450"/>
+!!! failure "Could not open serial port"
+
+    <img src="Images/2022-10-09_10-27-42-7c6gd.png" width="450"/>
+
+    ESP is not in flash mode -> press boot button when you flash
+
+    <img src="Images/2022-10-09_10-30-32-mrxj3.png" width="450"/>
+
+    <img src="Images/2022-10-09_10-30-51-i8pkx.png" width="450"/>
 

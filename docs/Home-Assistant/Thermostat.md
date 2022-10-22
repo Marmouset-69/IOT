@@ -1,10 +1,12 @@
 # Thermostat
 
-<img src="Images/thermostat-1.png" alt="Thermostat" height="250"/> <img src="Images/thermostat-2.png" 
-alt="Thermostat" height="250"/> <img src="Images/thermostat-3.png" alt="Thermostat" height="250"/>
+![thermostat](Images/Thermostat/thermostat-1.png){ width="250" }
 
+![thermostat](Images/Thermostat/thermostat-2.png){ width="250" }
 
-## Dans config.yaml
+![thermostat](Images/Thermostat/thermostat-3.png){ width="250" }
+
+## config.yaml
 
 ```
 # Thermostat generic- jmh 31/12/2021
@@ -71,6 +73,7 @@ climate:
 ```
 
 ## Schedule
-https://ledstripsandcode.blogspot.com/2018/11/simple-thermostat-scheduler-in-home.html
 
-https://gist.github.com/abmantis/34f1064fbe22c37bdbe79bc296c41a3a#file-ha_thermostat_scheduler-py
+[ttps://ledstripsandcode.blogspot.com/2018/11/simple-thermostat-scheduler-in-home.html](https://ledstripsandcode.blogspot.com/2018/11/simple-thermostat-scheduler-in-home.html)
+
+[https://gist.github.com/abmantis/34f1064fbe22c37bdbe79bc296c41a3a#file-ha_thermostat_scheduler-py](https://gist.github.com/abmantis/34f1064fbe22c37bdbe79bc296c41a3a#file-ha_thermostat_scheduler-py)
