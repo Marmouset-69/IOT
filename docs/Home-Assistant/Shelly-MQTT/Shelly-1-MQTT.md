@@ -4,6 +4,9 @@
 
 **We want to switch on/off a light.**
 
+!!! info
+An other interested page is https://sequr.be/blog/2020/10/getting-started-with-mqtt-and-home-assistant-and-shelly/
+
 ## Wire
 
 
