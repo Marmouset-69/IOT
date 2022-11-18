@@ -14,7 +14,7 @@
 ![](Images/IMG_4301.jpg){ width="320" }
 ![](Images/IMG_4302.jpg){ width="300" }
 
-![](Images/IMG_4311.JPG){ width="320" }
+![](Images/IMG_4311.JPG){ width="300" }
 ![](Images/IMG_4312.JPG){ width="300" }
 
 Plug in the Shelly. It does not appear on the network.
