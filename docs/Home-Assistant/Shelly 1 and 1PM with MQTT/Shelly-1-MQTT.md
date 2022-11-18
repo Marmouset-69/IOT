@@ -1,6 +1,7 @@
 # Shelly 1 with MQTT
 
-![](Images/IMG_4303.jpg){ width="300" }
+![](Images/IMG_4303.jpg){ width="320" }
+![](Images/IMG_4326.JPG){ width="290" }
 
 **We want to switch on/off a light.**
 
