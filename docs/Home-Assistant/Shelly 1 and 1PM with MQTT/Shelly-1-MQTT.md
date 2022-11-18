@@ -5,13 +5,16 @@
 **We want to switch on/off a light.**
 
 !!! info
-An other interested page is https://sequr.be/blog/2020/10/getting-started-with-mqtt-and-home-assistant-and-shelly/
+    An other interested page is https://sequr.be/blog/2020/10/getting-started-with-mqtt-and-home-assistant-and-shelly/
 
 ## Wire
 
 
 ![](Images/IMG_4301.jpg){ width="320" }
 ![](Images/IMG_4302.jpg){ width="300" }
+
+![](Images/IMG_4311.jpg){ width="320" }
+![](Images/IMG_4312.jpg){ width="300" }
 
 Plug in the Shelly. It does not appear on the network.
 You have to go on the Shelly app first to declare it.
