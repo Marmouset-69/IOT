@@ -28,8 +28,7 @@ You can now find the device on the networker. In my example the IP of the device
 Go to the web interface of the Shelly and **disable the connection to the cloud**.
 
 ![](Images/2022-12-07_15-49-38-cjt9x.png){ width="500" }
-![](Images/2022-11-16_19-03-59-ck26n.png){ width="500" }
-![](Images/2022-11-16_19-03-59-ck26n.png){ width="500" }
+
 
 !!! warning
     **Update** the device. It's necessery to have **CoIot** protocol.
