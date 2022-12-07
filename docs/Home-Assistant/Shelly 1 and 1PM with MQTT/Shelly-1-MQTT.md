@@ -1,6 +1,6 @@
 # Shelly 1 with MQTT
 
-**Who to use Shelly 1 & Shelly 1PM with Home Assistant**
+**How to use Shelly 1 & Shelly 1PM with Home Assistant**
 !!! info
     An other interested page is https://sequr.be/blog/2020/10/getting-started-with-mqtt-and-home-assistant-and-shelly/
 
@@ -52,12 +52,13 @@ To configure MQTT protocol, fill in the fields with values defined in Home Assis
 
 ![](Images/2022-11-16_19-25-58-zzxi1.png){ width="400" }
 
-Username and password are in the Mosquitto configuration.
+!!! info
+    Username and password are in the Mosquitto configuration. Password is a very long string
 
-![](Images/2022-11-16_19-20-23-3sqrg.png){ width="200" }
-![](Images/2022-11-16_19-20-32-61eiw.png){ width="300" }
+    ![](Images/2022-11-16_19-20-23-3sqrg.png){ width="200" }
+    ![](Images/2022-11-16_19-20-32-61eiw.png){ width="300" }
 
-![](Images/2022-11-16_19-20-48-pe6is.png){ width="400" }
+    ![](Images/2022-11-16_19-20-48-pe6is.png){ width="400" }
 
 Now, you can reboot the Shelly.
 
