@@ -11,21 +11,17 @@
 
 
 ## Wire
-
 ### Shelly 1
-![](../Images/Shelly-1PM/wire.png){ width="300" }
-
 ![](Images/IMG_4301.jpg){ width="300" }
 ![](Images/IMG_4302.jpg){ width="280" }
+!!! danger "Don't link SW to I, this desable the manual switch."
 
 ### Shelly 1PM
-
-![](Images/IMG_4328.jpg){ width="260" }
-![](Images/IMG_4329.jpg){ width="310" }
+![](../Images/Shelly-1PM/wire.png){ width="300" }
 
 ### Cumulus & Shelly 1PM
-
 ![](Images/IMG_4333.jpg){ width="280" }
+!!! danger "Don't link SW to I, this desable the manual switch."
 
 ## Configuration
 ### Shelly configuration
@@ -51,16 +47,18 @@ Go to the web interface of the Shelly and **remove the connection to the cloud**
 
 To configure MQTT protocol, fill in the fields with values defined in Home Assistant.
 
-
 ![](Images/2022-11-16_19-25-58-zzxi1.png){ width="400" }
 
-!!! info
-    Username and password are in the Mosquitto configuration. Password is a very long string
+!!! info "Username and password are in the Mosquitto configuration. Password is a very long string"
 
     ![](Images/2022-11-16_19-20-23-3sqrg.png){ width="200" }
     ![](Images/2022-11-16_19-20-32-61eiw.png){ width="300" }
 
     ![](Images/2022-11-16_19-20-48-pe6is.png){ width="400" }
+
+Set "Restore Last Mode - Configure Shelly device to Restore the last mode it was in, when it has power."
+
+![](../Images/Shelly-1PM/2022-12-18_11-28-04.png){ width="380" }
 
 Now, you can reboot the Shelly.
 
