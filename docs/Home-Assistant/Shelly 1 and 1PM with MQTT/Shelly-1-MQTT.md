@@ -13,6 +13,8 @@
 ## Wire
 
 ### Shelly 1
+![](../Images/Shelly-1PM/wire.png){ width="300" }
+
 ![](Images/IMG_4301.jpg){ width="300" }
 ![](Images/IMG_4302.jpg){ width="280" }
 
