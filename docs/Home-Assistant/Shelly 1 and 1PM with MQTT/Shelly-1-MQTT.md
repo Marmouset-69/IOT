@@ -24,6 +24,17 @@
 !!! danger "Don't link SW to I, this desable the manual switch."
 
 ## Configuration
+
+Reset the device : https://www.youtube.com/watch?v=dz7Aq4mGnQc
+Reset : On - 5 times off - On
+http://192.168.33.1
+
+### Solution 1
+1. plug the Shelly device.
+2. connect to the Shelly network
+3. In a browser, go to http://192.168.33.1
+4. Configure the Shelly device
+
 ### Shelly configuration
 Plug in the Shelly. It does not appear on the network.
 You have to go on the Shelly app first to declare it.
