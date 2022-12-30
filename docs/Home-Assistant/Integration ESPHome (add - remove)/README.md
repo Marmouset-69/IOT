@@ -22,12 +22,4 @@
 ## Re-discover / manually add Integration
 
 !!! note
-    You can just add the integration via the Add Integration button, use the device name with "**.local**" at the end for the host name.
-
-![Image title](Images/2022-10-16_16-37-09-3zcj6.png){ width="200" }
-
-![Image title](Images/2022-10-16_16-37-25-ckv2i.png){ width="400" }
-
-![Image title](Images/2022-10-16_16-33-14-5rq5p.png){ width="400" }
-
-![Image title](Images/2022-10-16_16-33-28-1x9dq.png){ width="400" }
+    See [FAQ](../FAQ)
