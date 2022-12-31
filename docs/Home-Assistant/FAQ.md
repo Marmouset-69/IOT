@@ -35,3 +35,7 @@ Si cela ne fonctionne toujours pas
 ![Image title](../Images/FAQ/2022-10-16_16-33-14-5rq5p.png){ width="400" }
 
 ![Image title](../Images/FAQ/2022-10-16_16-33-28-1x9dq.png){ width="400" }
+
+## Reset Shelly 1PM
+Reset the device : https://www.youtube.com/watch?v=dz7Aq4mGnQc
+Reset : On - 5 times off - On http://192.168.33.1
