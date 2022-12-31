@@ -26,7 +26,10 @@
 - Reset : On - 5 times off - On
 - go to http://192.168.33.1
 
-### Configuration Shelly device : Solution 1
+### Configuration Shelly device : Solution 1 (with the Web browse)
+
+Configuration method with the Web browser. We do not use the Shelly application.
+
 !!! info
     This is the best solution. In fact app. Shelly v.1.35.22 doesn't work.
 
