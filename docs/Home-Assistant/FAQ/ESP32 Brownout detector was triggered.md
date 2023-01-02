@@ -1,4 +1,4 @@
-# ESP32
+# ESP32 “Brownout detector was triggered”
 
 ESP32 Troubleshooting Guide: See https://randomnerdtutorials.com/esp32-troubleshooting-guide/
 
