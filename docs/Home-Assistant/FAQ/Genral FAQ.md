@@ -1,17 +1,20 @@
-# FAQ
+# General FAQ
 
 ## Si l'esp n'ai pas reconnu
 - change USB Cable
-- Changer d'adaptateur <br><img src="../Images/IMG_8334.jpg" width="300">
-- installer le driver associé à l'esp (voir model sur le microprocesseur) <br><img src="../Images/IMG_8332.jpg" width="300"> <br><img src="../Images/Install-CP210x-VCP-Driver 2022-01-29 16-10-44.png" width="300">
-- vérifier dans /dev si le port existe bien <br><img src="../Images/terminal.png" width="300">
+- Change d'adaptateur<BR>![Image title](Images/IMG_8334.jpg){ width="400" }
+- installer le driver associé à l'esp (voir model sur le microprocesseur) <br>
+![Image title](Images/IMG_8332.jpg){width="300"}<br>
+![Image title](Images/Install-CP210x-VCP-Driver_2022-01-29_16-10-44.png){width="300"}
+- vérifier dans /dev si le port existe bien <br>
+![Image title](Images/terminal.png){width="300"}
 
 ## Impossibible de téléverser le code
 
-<img src="../Images/upload-error.png" width="400"> 
-http://127.0.0.1:8000/Home-Assistant/FAQ/FAQ/Images/IMG_8334.jpg
+![Image title](Images/upload-error.png){width="400"}
 
-Il faut presser sur RESET + GPIO0 au moment du téléchargement. Attention il y a 3 boutons sur certain modèl ! Utiliser celui sous l’ESP et le GPIO0 du support.
+Il faut presser sur RESET + GPIO0 au moment du téléchargement.
+Attention il y a 3 boutons sur certain modèl ! Utiliser celui sous l’ESP et le GPIO0 du support.
 
 ATTENTION : Il faut ensuite débrancher puis rebrancher l’ESP
 
@@ -22,7 +25,7 @@ Si cela ne fonctionne toujours pas
 - débrancher toutes les pin et recommencer.
 
 ## Corespondance Dx -> GPIOx
-<img src="../Images/ESP8266-NodeMCU-kit-12-E-pinout-gpio-pin.png" width="400">
+![Image title](Images/ESP8266-NodeMCU-kit-12-E-pinout-gpio-pin.png){width="400"}
 
 ## Re-discover / manually add Integration
 

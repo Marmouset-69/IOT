@@ -1,16 +1,16 @@
-# ESP32-CAM Installation 
+# ESP32-CAM Installation
 
-![](Images/2022-09-24_10-57-04.png){ width="200" }
+![](Images/ESP32-CAM/2022-09-24_10-57-04.png){ width="200" }
 
-![](Images/2022-09-24_10-57-03.png){ width="100" }
+![](Images/ESP32-CAM/2022-09-24_10-57-03.png){ width="100" }
 
-![](Images/2022-09-24_10-57-30.png){ width="300" }
+![](Images/ESP32-CAM/2022-09-24_10-57-30.png){ width="300" }
 
-![](Images/2022-09-24_10-57-39.png){ width="300" }
+![](Images/ESP32-CAM/2022-09-24_10-57-39.png){ width="300" }
 
-![](Images/2022-09-24_10-57-50.png){ width="200" }
+![](Images/ESP32-CAM/2022-09-24_10-57-50.png){ width="200" }
 
-![](Images/2022-09-24_10-58-20.png){ width="300" }
+![](Images/ESP32-CAM/2022-09-24_10-58-20.png){ width="300" }
 
 Edit the code :
 ```
@@ -73,39 +73,39 @@ switch:
 ```
 Select **Manual download**
 
-![](Images/2022-09-24_16-31-14.png){ width="300" }
+![](Images/ESP32-CAM/2022-09-24_16-31-14.png){ width="300" }
 
-![](Images/2022-09-24_16-34-35-mlttu.png){ width="500" }
+![](Images/ESP32-CAM/2022-09-24_16-34-35-mlttu.png){ width="500" }
 
-![](Images/2022-09-24_16-38-16-yfosd.png){ width="500" }
+![](Images/ESP32-CAM/2022-09-24_16-38-16-yfosd.png){ width="500" }
 
 !!! WARNING
     If the ESP is not visible on the serial port, it may be due to the cable, you must try another one
 
-    ![](Images/IMG_3976.JPG){ width="300" }
+    ![](Images/ESP32-CAM/IMG_3976.JPG){ width="300" }
 
 !!! WARNING
     If an error appears, it means that the ESP is not in "write" mode. You must then press the "IO0" button THEN connect the ESP and flash it.
 
-    ![](Images/IMG_3975.jpg){ width="250" }
+    ![](Images/ESP32-CAM/IMG_3975.jpg){ width="250" }
 
 
-![](Images/2022-09-24_17-16-04-wshpx.png){ width="500" }
+![](Images/ESP32-CAM/2022-09-24_17-16-04-wshpx.png){ width="500" }
 
 >Disconnect then reconnect the ESP
 
-![](Images/2022-09-24_17-18-33-076n7.png){ width="300" }
+![](Images/ESP32-CAM/2022-09-24_17-18-33-076n7.png){ width="300" }
 
-![](Images/2022-09-24_17-21-33-46yb4.png){ width="300" }
+![](Images/ESP32-CAM/2022-09-24_17-21-33-46yb4.png){ width="300" }
 
-![](Images/2022-09-24_17-21-41-m2uyz.png){ width="300" }
+![](Images/ESP32-CAM/2022-09-24_17-21-41-m2uyz.png){ width="300" }
 
-![](Images/2022-09-24_17-21-51-oyfpp.png){ width="300" }
+![](Images/ESP32-CAM/2022-09-24_17-21-51-oyfpp.png){ width="300" }
 
-![](Images/2022-09-24_17-22-04-kssti.png){ width="300" }
+![](Images/ESP32-CAM/2022-09-24_17-22-04-kssti.png){ width="300" }
 
-![](Images/2022-09-24_17-22-14-me3k0.png){ width="300" }
+![](Images/ESP32-CAM/2022-09-24_17-22-14-me3k0.png){ width="300" }
 
-![](Images/2022-09-24_17-22-40-a70lt.png){ width="300" }
+![](Images/ESP32-CAM/2022-09-24_17-22-40-a70lt.png){ width="300" }
 
-![](Images/2022-09-24_17-24-21-2psnt.png){ width="300" }
+![](Images/ESP32-CAM/2022-09-24_17-24-21-2psnt.png){ width="300" }
