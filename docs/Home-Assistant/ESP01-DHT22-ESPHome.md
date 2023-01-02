@@ -1,37 +1,38 @@
-# ESP-01S ( work! )
-![ESP-01S](Images/Images-ESP-01S/ESP-01S.JPG){ width="200" }
+# ESP_01S/DHT22/ESPHome/Box
+![ESP-01S](Images/ESP01-DHT22-ESPHome/ESP-01S.JPG){ width="200" }
+![ESPHome logo](Images/ESP01-DHT22-ESPHome/IMG_5046.jpg){ width="218" }
 
 ## Steps
 (more details below)
 
 - **Add** a new ESP device - **esp8266**
 
-![ESP-8266](Images/Images-ESP-01S/2022-10-21_19-15-31-jmve3.png){ width="300" }
-![ESP-Legacy](Images/Images-ESP-01S/2022-10-21_20-40-36-72n4c.png){ width="300" }
+![ESP-8266](Images/ESP01-DHT22-ESPHome/2022-10-21_19-15-31-jmve3.png){ width="300" }
+![ESP-Legacy](Images/ESP01-DHT22-ESPHome/2022-10-21_20-40-36-72n4c.png){ width="300" }
 
 - copy the **code** (see below)
 - **install** - "Manual download"
 
-![Manual dowload](Images/Images-ESP-01S/2022-10-21_20-26-54-6cr0y.png){ width="500" }
+![Manual dowload](Images/ESP01-DHT22-ESPHome/2022-10-21_20-26-54-6cr0y.png){ width="500" }
 
 - plug the esp01 on "**USB to ESP-01 Adapter** Board" (see below)
 - flash the esp01 with **ESPHome-flasher**
 - plug the **esp01 on the DHT22 board**
 - use **LanScan** to find the new devise
 
-![LanScan](Images/Images-ESP-01S/2022-10-21_18-55-21-ph0h2.png){ width="600" }
+![LanScan](Images/ESP01-DHT22-ESPHome/2022-10-21_18-55-21-ph0h2.png){ width="600" }
 
 - go to your router and configure a **static IP** for this new device
 
-![LanScan](Images/Images-ESP-01S/2022-10-21_20-52-41-f4m7a.png){ width="600" }
+![LanScan](Images/ESP01-DHT22-ESPHome/2022-10-21_20-52-41-f4m7a.png){ width="600" }
 
 - unplug / plug the device to **update** the new IP
 - go to integration of Homeassistant and **configure** the new integration
 
-![LanScan](Images/Images-ESP-01S/2022-10-21_20-56-09-lri2o.png){ width="400" }
+![LanScan](Images/ESP01-DHT22-ESPHome/2022-10-21_20-56-09-lri2o.png){ width="400" }
 
-![LanScan](Images/Images-ESP-01S/2022-10-21_20-56-21-c0rbw.png){ width="200" }
-![LanScan](Images/Images-ESP-01S/2022-10-21_20-56-49-lgmhm.png){ width="200" }
+![LanScan](Images/ESP01-DHT22-ESPHome/2022-10-21_20-56-21-c0rbw.png){ width="200" }
+![LanScan](Images/ESP01-DHT22-ESPHome/2022-10-21_20-56-49-lgmhm.png){ width="200" }
 
 ## esphome code
 
@@ -79,26 +80,39 @@ update_interval: 600s
 ## Flash ESP
 USB to ESP-01 Adapter Board
 
-![adaptater-USB](Images/Images-ESP-01S/adaptater-USB.png){ width="200" }
+![adaptater-USB](Images/ESP01-DHT22-ESPHome/adaptater-USB.png){ width="200" }
 
 ### Home assistant
 
 To be sure to correctly flash ESP make a .bin file. Use "Manual download"
 
-![Manual download](Images/Images-ESP-01S/Manual-dowload.png){ width="300" }
+![Manual download](Images/ESP01-DHT22-ESPHome/Manual-dowload.png){ width="300" }
 
 ## ESPHome-Flasher
 
 Use "ESPHome-Flasher" to flash the ESP
 
-![ESPHome logo](Images/Images-ESP-01S/esphome-flasher.png){ width="200" }
+![ESPHome logo](Images/ESP01-DHT22-ESPHome/esphome-flasher.png){ width="200" }
 
 ## Box
 
 Make the associated USB cable (see page "USB Cable").
 
+![ESPHome logo](Images/ESP01-DHT22-ESPHome/IMG_5047.jpg){ width="200" }
 
-Solder the two male pins on the back of the ESP. Mark the positive terminal in red so as not to make a mistake.
+
+Solder the two male pins on the back of the ESP and mark the positive
+terminal in red so as not to make a mistake.
+
+![ESPHome logo](Images/ESP01-DHT22-ESPHome/IMG_5043.jpg){ width="200" }
+![ESPHome logo](Images/ESP01-DHT22-ESPHome/IMG_5044.jpg){ width="200" }
+
+Put a ball of sticky dough on the ugly one so that it does not light up too much.
+
+![ESPHome logo](Images/ESP01-DHT22-ESPHome/IMG_5041.jpg){ width="200" }
+
 Make a box with a 3D printer and put the whole thing inside.
 
 It is finished.
+
+![ESPHome logo](Images/ESP01-DHT22-ESPHome/IMG_5046.jpg){ width="200" }
