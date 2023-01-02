@@ -39,7 +39,7 @@
 name: esp32-dht22-02
 
 esp8266:
-  board: esp01_1m
+board: esp01_1m
 
 # Enable logging
 logger:
@@ -48,32 +48,32 @@ logger:
 api:
 
 ota:
-  password: "864868a05abffdf5f9bb073518cd0809"
+password: "864868a05abffdf5f9bb073518cd0809"
 
 wifi:
-  ssid: !secret wifi_ssid
-  password: !secret wifi_password
+ssid: !secret wifi_ssid
+password: !secret wifi_password
 
-  # Enable fallback hotspot (captive portal) in case wifi connection fails
-  ap:
-    ssid: "Esp32-Dht22-02 Fallback Hotspot"
-    password: "WXjJplTlkNPa"
+# Enable fallback hotspot (captive portal) in case wifi connection fails
+ap:
+ssid: "Esp32-Dht22-02 Fallback Hotspot"
+password: "WXjJplTlkNPa"
 
 captive_portal:
 sensor:
-    - platform: dht
-    # model: DHT22 Don't work
-    model: AM2302
-    pin: GPIO02
-    temperature:
-        name: "esp01-dht22-04 Temperature"
-        filters:
-            - offset: 0.0
-    humidity:
-        name: "esp01-dht22-04 Humidite"
-        filters:
-            - offset: 0.0
-    update_interval: 600s
+- platform: dht
+# model: DHT22 Don't work
+model: AM2302
+pin: GPIO02
+temperature:
+name: "esp01-dht22-04 Temperature"
+filters:
+- offset: 0.0
+humidity:
+name: "esp01-dht22-04 Humidite"
+filters:
+- offset: 0.0
+update_interval: 600s
 ```
 
 ## Flash ESP
@@ -92,3 +92,13 @@ To be sure to correctly flash ESP make a .bin file. Use "Manual download"
 Use "ESPHome-Flasher" to flash the ESP
 
 ![ESPHome logo](Images/Images-ESP-01S/esphome-flasher.png){ width="200" }
+
+## Box
+
+Make the associated USB cable (see page "USB Cable").
+
+
+Solder the two male pins on the back of the ESP. Mark the positive terminal in red so as not to make a mistake.
+Make a box with a 3D printer and put the whole thing inside.
+
+It is finished.
