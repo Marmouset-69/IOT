@@ -1,7 +1,7 @@
 # FAQ
 
 ## Si l'esp n'ai pas reconnu
-- changer de cable USB
+- change USB Cable
 - Changer d'adaptateur <br><img src="../Images/IMG_8334.jpg" width="300">
 - installer le driver associé à l'esp (voir model sur le microprocesseur) <br><img src="../Images/IMG_8332.jpg" width="300"> <br><img src="../Images/Install-CP210x-VCP-Driver 2022-01-29 16-10-44.png" width="300">
 - vérifier dans /dev si le port existe bien <br><img src="../Images/terminal.png" width="300">
