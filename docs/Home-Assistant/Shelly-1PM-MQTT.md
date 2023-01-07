@@ -21,6 +21,9 @@
 
 !!! danger "Don't link SW to I, this desable the manual switch."
 
+!!! danger "Do not use with a ceramic hob, it can consume more than 3500 W (Shelly 1PM limit)"
+    ![](Images/Shelly-1PM/IMG_5057.JPG){ width="280" }
+
 ### How to reset Shelly 1PM
 - video : Reset the device : [youtube video](https://www.youtube.com/watch?v=dz7Aq4mGnQc)
 - Reset : On - 5 times off - On
