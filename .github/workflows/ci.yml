@@ -14,4 +14,5 @@ jobs:
           python-version: 3.x
       - run: pip install mkdocs-material
       - run: pip3 install mkdocs-glightbox
+      - run: pip install git-revision-date-localized
       - run: mkdocs gh-deploy --force
