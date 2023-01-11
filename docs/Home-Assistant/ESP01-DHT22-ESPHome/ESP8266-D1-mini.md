@@ -1,4 +1,4 @@
-# ESP8266 DI mini
+# ESP8266 DI mini coucou
 
 ## Config with ESPHome
 
