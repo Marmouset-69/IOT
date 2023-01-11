@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../FAQ/Integration%20ESPHome%20%28add%20-%20remove%29/" rel="prev"/>
+<link href="../MQTT/esp32-MQTT-DHT22-Led/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.3" name="generator"/>
+<title>Flash ESP - IOT</title>
+<link href="../../assets/stylesheets/main.6b71719e.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#flash-esp">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="IOT" class="md-header__button md-logo" data-md-component="logo" href="../.." title="IOT">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            IOT
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Flash ESP
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="IOT" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="IOT">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    IOT
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        IOT
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label aria-expanded="true" class="md-nav__link" for="__nav_2" tabindex="0">
+          Home Assistant
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Home Assistant" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Home Assistant
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../DHT22_accuracy/">
+        DHT22 accuracy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ESP32-CAM/">
+        ESP32-CAM Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Faire%20un%20plan/">
+        Faire un plan
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Faire%20une%20automation/">
+        Faire une automation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Installer%20un%20relay%20pour%20radiateur/">
+        Relais Qubino Flush 2 sur un radiateur électrique
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Shelly-1PM-MQTT/">
+        Shelly 1 with MQTT
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Tasmota-plug/">
+        Tasmota - Athom Plug V2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Thermostat/">
+        Thermostat
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../USB%20cable/">
+        USB cable construction
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_10" id="__nav_2_10" type="checkbox"/>
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_10" tabindex="0">
+          ESP01 DHT22 ESPHome
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ESP01 DHT22 ESPHome" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_10">
+<span class="md-nav__icon md-icon"></span>
+          ESP01 DHT22 ESPHome
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ESP01-DHT22-ESPHome/ESP8266-D1-mini/">
+        ESP8266 DI mini
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_11" id="__nav_2_11" type="checkbox"/>
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_11" tabindex="0">
+          FAQ
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="FAQ" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_11">
+<span class="md-nav__icon md-icon"></span>
+          FAQ
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../FAQ/ESP32%20Brownout%20detector%20was%20triggered/">
+        ESP32 “Brownout detector was triggered”
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../FAQ/Genral%20FAQ/">
+        General FAQ
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../FAQ/Integration%20ESPHome%20%28add%20-%20remove%29/">
+        Integration ESPhome
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_12" id="__nav_2_12" type="checkbox"/>
+<label aria-expanded="true" class="md-nav__link" for="__nav_2_12" tabindex="0">
+          Flash ESP
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Flash ESP" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_12">
+<span class="md-nav__icon md-icon"></span>
+          Flash ESP
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Flash ESP
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Flash ESP
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-of-esp8266-dht22">
+    Example of ESP8266 + DHT22
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_13" id="__nav_2_13" type="checkbox"/>
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_13" tabindex="0">
+          MQTT
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="MQTT" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_13">
+<span class="md-nav__icon md-icon"></span>
+          MQTT
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../MQTT/esp32-MQTT-DHT22-Led/">
+        ESP32 + DHT22 + LED
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../MQTT/esp32-MQTT-DHT22/">
+        ESP32 + DHT22
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_14" id="__nav_2_14" type="checkbox"/>
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_14" tabindex="0">
+          MySensors
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="MySensors" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_14">
+<span class="md-nav__icon md-icon"></span>
+          MySensors
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../MySensors/Libraries/">
+        DHT22 Libraries
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../MySensors/MySensor/">
+        MySensors integration
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_15" id="__nav_2_15" type="checkbox"/>
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_15" tabindex="0">
+          PZEM 004T energy meter
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="PZEM 004T energy meter" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_15">
+<span class="md-nav__icon md-icon"></span>
+          PZEM 004T energy meter
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../PZEM-004T-energy-meter/PZEM-004T/">
+        PZEM 004T
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_16" id="__nav_2_16" type="checkbox"/>
+<label aria-expanded="false" class="md-nav__link" for="__nav_2_16" tabindex="0">
+          Shelly EM energy meter
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Shelly EM energy meter" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_16">
+<span class="md-nav__icon md-icon"></span>
+          Shelly EM energy meter
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Shelly-EM-energy-meter/Shelly-EM-MQTT/">
+        Shelly EM with MQTT
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label aria-expanded="false" class="md-nav__link" for="__nav_3" tabindex="0">
+          Memo Git
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Memo Git" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Memo Git
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Memo-Git/">
+        Memo-Git
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-of-esp8266-dht22">
+    Example of ESP8266 + DHT22
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="flash-esp">Flash ESP</h1>
+<h2 id="example-of-esp8266-dht22">Example of ESP8266 + DHT22</h2>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="auto" href="Images/2022-10-09_10-11-25-fdr4h.png"><img src="Images/2022-10-09_10-11-25-fdr4h.png" width="600"/></a></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>esphome:
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>  name: esp8266-01
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>esp8266:
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>  board: esp01_1m
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a># Enable logging
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>logger:
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a># Enable Home Assistant API
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>api:
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>ota:
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>  password: "fce4d1f6a9c5d8fb2a1158b0013b182c"
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>wifi:
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>  ssid: !secret wifi_ssid
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>  password: !secret wifi_password
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a>
+<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>  # Enable fallback hotspot (captive portal) in case wifi connection fails
+<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>  ap:
+<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>    ssid: "Esp8266-01 Fallback Hotspot"
+<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>    password: "uUcRFwj1RvMz"
+<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>
+<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a>captive_portal:
+<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>sensor:
+<a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a>  - platform: dht
+<a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a>    model: DHT22
+<a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a>    pin: 4
+<a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a>    temperature:
+<a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a>      name: "Salon Temperature (ESP8622-salon .44)"
+<a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a>      filters:
+<a href="#__codelineno-0-33" id="__codelineno-0-33" name="__codelineno-0-33"></a>        offset: 0.2      
+<a href="#__codelineno-0-34" id="__codelineno-0-34" name="__codelineno-0-34"></a>    humidity:
+<a href="#__codelineno-0-35" id="__codelineno-0-35" name="__codelineno-0-35"></a>      name: "Salon Humidity  (ESP8622-salon .44)"
+<a href="#__codelineno-0-36" id="__codelineno-0-36" name="__codelineno-0-36"></a>      filters:
+<a href="#__codelineno-0-37" id="__codelineno-0-37" name="__codelineno-0-37"></a>        offset: -0.25      
+<a href="#__codelineno-0-38" id="__codelineno-0-38" name="__codelineno-0-38"></a>    update_interval: 600s
+</code></pre></div>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="auto" href="Images/2022-10-09_09-47-21-xd5ut.png"><img src="Images/2022-10-09_09-47-21-xd5ut.png" width="400"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="auto" href="Images/2022-10-09_09-47-30-g6m3z.png"><img src="Images/2022-10-09_09-47-30-g6m3z.png" width="300"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="auto" href="Images/2022-10-09_09-47-50-sji1a.png"><img src="Images/2022-10-09_09-47-50-sji1a.png" width="500"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="auto" href="Images/2022-10-09_10-09-49-h4082.png"><img src="Images/2022-10-09_10-09-49-h4082.png" width="500"/></a></p>
+<div class="admonition failure">
+<p class="admonition-title">Could not open serial port</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="auto" href="Images/2022-10-09_10-27-42-7c6gd.png"><img src="Images/2022-10-09_10-27-42-7c6gd.png" width="450"/></a></p>
+<p>ESP is not in flash mode -&gt; press boot button when you flash</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="auto" href="Images/2022-10-09_10-30-32-mrxj3.png"><img src="Images/2022-10-09_10-30-32-mrxj3.png" width="450"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="auto" href="Images/2022-10-09_10-30-51-i8pkx.png"><img src="Images/2022-10-09_10-30-51-i8pkx.png" width="450"/></a></p>
+</div>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 11, 2023</span>
+</small>
+</div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
