@@ -12,14 +12,13 @@
 
 ## Wire
 ### Shelly 1PM
-![](Images/Shelly-1PM/wire.png){ width="300" }
+![](Images/Shelly-1PM/wire.png){ width="260" }
+![](Images/Shelly-1PM/IMG_5070.jpg){ width="420" }
 
 ![](Images/Shelly-1PM/IMG_4302.jpg){ width="280" }
 
 ![](Images/Shelly-1PM/IMG_5067.jpg){ width="240" }
 ![](Images/Shelly-1PM/IMG_4333.jpg){ width="330" }
-
-!!! danger "Don't link SW to I, this desable the manual switch."
 
 !!! danger "Do not use with a ceramic hob, it can consume more than 3500 W (Shelly 1PM limit)"
     ![](Images/Shelly-1PM/IMG_5057.JPG){ width="280" }
