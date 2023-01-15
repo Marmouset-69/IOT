@@ -6,7 +6,8 @@ https://docs.github.com/en/github/writing-on-github/getting-started-with-writing
 ## Commandes de base
 
 ### Initialiser un projet
-```cd chemin/vers/mon_dossier
+```
+cd chemin/vers/mon_dossier
 echo "# MON_PROJET" >> README.md
 git init
 git add README.md

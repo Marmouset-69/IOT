@@ -13,7 +13,7 @@
 ![](Images/ESP32-CAM/2022-09-24_10-58-20.png){ width="300" }
 
 Edit the code :
-```
+``` yaml
 esphome:
   name: esp32-cam-5
 

@@ -18,7 +18,7 @@ See (FAQ)[../FAQ] if any problem
 
 **Attention: to upload the code you MUST deconnect the 'vin' pin.**
 
-```
+``` C
 #include <WiFi.h>
 #include <PubSubClient.h>
 #include "DHT.h"
@@ -202,7 +202,7 @@ Test with MQTT Explorer
 ## Home Assistant
 
 configutation.yaml
-```
+``` yaml
 sensor:
   - platform: mqtt  
     unique_id: "C8:C9:A3:D2:BA:EC_temp"

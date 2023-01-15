@@ -58,7 +58,7 @@ played on the Offset parameter in the configuration file of the ESPHome.
 |Temperature|-1.9|-1.8|-1.7|-1.6|-1.7|
 |Humidity|-3|+6|0|0|0|
 
-``` hl_lines="8 12"
+``` yaml hl_lines="8 12"
 sensor:
     - platform: dht
         model: DHT22_TYPE2

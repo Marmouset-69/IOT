@@ -3,7 +3,7 @@
 
 <img src="Images/2022-10-09_10-11-25-fdr4h.png" width="600"/>
 
-```
+``` yaml
 esphome:
   name: esp8266-01
 

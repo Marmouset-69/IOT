@@ -4,7 +4,7 @@
 
 ![](Images/Images-ESP8266-D1-mini/IMG_4026.jpg){ width="300" }
 
-```
+``` yaml
 esphome:
   name: esp8266-d1-mini-2
   platform: ESP8266

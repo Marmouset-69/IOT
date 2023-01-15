@@ -20,7 +20,7 @@ Use "DHTtester.ino" example code given with DHT22 lib.
 ### MQTT Code
 Voir : [https://diyi0t.com/microcontroller-to-raspberry-pi-wifi-mqtt-communication/](https://diyi0t.com/microcontroller-to-raspberry-pi-wifi-mqtt-communication/)
 
-```
+``` C
 #include "DHT.h"
 #include "PubSubClient.h" // Connect and publish to the MQTT broker
 
@@ -150,7 +150,7 @@ For testing MQTT, use "MQTT Explorer" (Apple Store)
 # Home Assistant
 ## Configuration
 Copy code into the configuration.yaml file
-```
+``` yaml
 sensor:
   - platform: mqtt  
     unique_id: "C8:C9:A3:D2:BA:EC_temp"

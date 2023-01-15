@@ -14,7 +14,7 @@ PZEM-004T
 ![](Images/2022-11-26_16-44-01-6s2cy.png){ width="250" }
 ![](Images/2022-11-26_16-44-17-ho3d7.png){ width="250" }
 
-```
+``` yaml
 esphome:
     name: "energy-meter"
     comment: 'PZEM-004T power Meter'
