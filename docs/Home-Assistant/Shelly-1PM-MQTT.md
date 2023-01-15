@@ -37,7 +37,7 @@ Configuration method with the Web browser. We do not use the Shelly application.
 
 1. plug the Shelly device.
 2. connect to the Shelly network
-3. In a browser, go to http://192.168.33.1
+3. In a browser, go to http://192.168.33.1 (see below)
 4. Configure the Shelly device
 
 Find the Shelly network
@@ -54,7 +54,8 @@ Configure the network
 ![](Images/Shelly-1PM/2022-12-30_20-48-12.png){ width="300" }
 
 Change your wi-fi network back to your home network.
-Find the new devi on your wifi network. You can use [LanScan app.](https://www.iwaxx.com/lanscan/) (on [App Store](https://apps.apple.com/fr/app/lanscan/id472226235?mt=12) )
+Find the new device on your wifi network.
+You can use [LanScan app.](https://www.iwaxx.com/lanscan/) (on [App Store](https://apps.apple.com/fr/app/lanscan/id472226235?mt=12) )
 
 Update the firmware
 
@@ -84,6 +85,7 @@ Go to the web interface of the Shelly and **remove the connection to the cloud**
 
 !!! warning
     **Update** the device. It's necessery to have **CoIot** protocol.
+
     ![](Images/Shelly-1PM/2022-11-16_19-24-42-hapwu.png){ width="500" }
 
 ## Configure MQTT
@@ -114,5 +116,9 @@ The configuration of the Shelly device is now finished. Go to Home Assistant for
 
 ![](Images/Shelly-1PM/2022-11-16_19-28-25-omh8v.png){ width="300" }
 ![](Images/Shelly-1PM/2022-11-16_20-31-39-qci2t.png){ width="300" }
+
+### Static IP
+
+Now you can change the IP on your router to have a static IP
 
 
