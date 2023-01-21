@@ -168,3 +168,12 @@ Add
 ``` sh
 sudo python /home/pi/sample.py &
 ```
+#### Remove scren saver
+In order to prevent sleep mode in Desktop mode, we will simply add a screensaver
+since it is not present by default, and we will be able to configure it precisely to prevent sleep mode.
+
+- Open the terminal and type the command : `sudo apt-get install xscreensaver`
+- Reboot the Rasp.
+- go to the applications / Menu / Preferences / Screensaver.
+- In the window that opens, all that's left is to choose to disable the screensaver
+from the drop-down list at the top left.
