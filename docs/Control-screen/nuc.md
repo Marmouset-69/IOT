@@ -128,6 +128,21 @@ Gnome on Xorg
 ```sleep 1 && xset dpms force off```
 
 
-fdgdfsgdfg
-fdgdfgfgd
-gfdgdfsg
+
+
+-----
+
+https://umanitoba.ca/computing/ist/software/unix/vnchowto-passwd.html
+
+hostname% rm .vnc/passwd
+remove .vnc/passwd? y
+hostname% vncserver
+You will require a password to access your desktops.
+
+Password: ********
+Verify: ********
+
+
+--- remove mdp
+sudo passwd -d <username>
+    
