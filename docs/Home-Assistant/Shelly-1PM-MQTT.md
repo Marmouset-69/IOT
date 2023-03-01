@@ -121,4 +121,12 @@ The configuration of the Shelly device is now finished. Go to Home Assistant for
 
 Now you can change the IP on your router to have a static IP
 
+### Rename entitie
+
+Go to web interface and rename the Shelly
+
+Go to Shelly configaration parameters on Home Assistant. Rename by clicking on the three dots menu
+
+![](Images/Shelly-1PM/2023-03-01_15-07-37.png){ width="300" }
+![](Images/Shelly-1PM/2023-03-01_15-07-52.png){ width="300" }
 
