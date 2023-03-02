@@ -275,3 +275,31 @@ allow_bypass_login: true
 - type: homeassistant
 ```
 
+## Remove " Computer will suspend very soon because of inactivity" message
+
+![](Images/IMG_5771.jpg){ width="300" }
+
+see [STUDIOS 75](http://www.studios-75.fr/base-de-connaissances/informatique/systeme/linux/debian/desactiver-la-mise-en-veille-de-debian-en-ligne-de-commande/)
+```
+vi /etc/gdm3/greeter.dconf-defaults
+```
+Go to the section:
+```
+# Automatic suspend
+# =================
+```
+
+Uncomment the following line if you are on mains (remove the # in front):
+```
+sleep-inactive-ac-type et indiquer la valeur "nothing" ou "blank".
+```
+Uncomment the following lines if you are on Battery:
+```
+sleep-inactive-battery-timeout=0//    (The default setting is 1200)
+sleep-inactive-battery-type='blank'
+```
+Save the file and restart the gdm service (or restart your system).
+
+
+
+
