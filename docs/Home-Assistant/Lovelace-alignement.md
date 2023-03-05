@@ -50,9 +50,9 @@ grid-template-areas: /
 
 ``` yaml title="Editor code"
 type: custom:layout-card
-layout_type: grid
+layout_type: custom:grid-layout
 layout:
-grid-template-columns: 40% auto
+    grid-template-columns: 40% auto
     grid-template-areas: |
     "zone1 zoneV"
     "zone2 zoneV"
