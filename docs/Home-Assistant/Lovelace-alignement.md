@@ -88,9 +88,9 @@ grid-template-areas: |
 
 - Go to your lovelace views and select "Edit Dashboard"
 - Click the pencil symbol next to the view name to open up the view properties
-- Select "Grid (layout-card)" from the "View type" dropdown list
+- Select "Side bar" from the "View type" dropdown list
 - Click "Save"
 
 ![](Images/Lovelace-alignement/2023-03-04_17-25-00.png){ width="500" }
 
-![](Images/Lovelace-alignement/2023-03-04_17-24-46.png){ width="300" }
+![](Images/Lovelace-alignement/2023-03-05_19-15-21.png){ width="300" }
