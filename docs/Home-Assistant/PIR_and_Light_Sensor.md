@@ -13,6 +13,9 @@ see [Instructables pages](https://www.instructables.com/ESPHome-Wireless-PIR-and
 ![](Images/PIR_and_Light_Sensor/IMG_5823.jpg){ width="350" }
 ![](Images/PIR_and_Light_Sensor/IMG_5824.jpg){ width="350" }
 
+!!! warning
+    Be careful to put the led ribbon in the right direction. The current only flows in one direction.
+
 ## Automations
 ![](Images/PIR_and_Light_Sensor/2023-03-11_22-26-15.png){ width="800" }
 
