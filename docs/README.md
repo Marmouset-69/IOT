@@ -1,5 +1,8 @@
-# IOT
+# My Home Assistant tricks!
+**Keywords**: Home Assitant, Lovelace, Tasmota, Shelly, Qubino, ESP8268, ESP01, PZEM 004T, DHT22, PIR, MQTT, Intel NUC
 
-<figure>![Papge](Images/DALL·E 2023-03-15 12.11.03.jpg){ width="560" }
-    <figcaption>Joachim S. Müller</figcaption>
-</figure>
+
+<p style="margin-left: auto; margin-right: auto;width: 400px">
+    <br><br><br>
+    <img src="Images/DALL-E-2023-03-15 12.11.03.png">
+</p>
