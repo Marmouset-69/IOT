@@ -2,7 +2,7 @@
 
 See [Instructables pages](https://www.instructables.com/ESPHome-Wireless-PIR-and-Light-Sensor/)
 
-## PIR sensor
+## PIR sensor HC-SR501
 
 ![](../Control-screen/Images/sr501-pir-3.jpg){ width="190" }
 ![](../Control-screen/Images/sr501-pir-1.jpg){ width="140" }
