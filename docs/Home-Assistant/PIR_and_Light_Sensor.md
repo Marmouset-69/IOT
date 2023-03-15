@@ -2,6 +2,18 @@
 
 See [Instructables pages](https://www.instructables.com/ESPHome-Wireless-PIR-and-Light-Sensor/)
 
+## PIR sensor
+
+![](../Control-screen/Images/sr501-pir-3.jpg){ width="190" }
+![](../Control-screen/Images/sr501-pir-1.jpg){ width="140" }
+
+### Time Delay Adjustment
+![](../Control-screen/Images/IMG_5728.jpg){ width="180" }
+![](../Control-screen/Images/IMG_5727.jpg){ width="190" }
+![](../Control-screen/Images/IMG_5729.jpg){ width="180" }
+
+Delay is (from left to right) 10s, 1000s (1'30'') and 2100s (3'30'')
+
 ## Wire
 
 ![](Images/PIR_and_Light_Sensor/2023-03-15_17-27-39.png){ width="400" }
