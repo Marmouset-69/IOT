@@ -21,8 +21,8 @@ layout_type: custom:grid-layout
 layout:
     grid-template-columns: 30% auto
 cards:
-    - type: markdown
-      content: 'The **Markdown** card allows you to write any text. '
+  - type: markdown
+    content: 'The **Markdown** card allows you to write any text. '
   - type: markdown
     content: >
       The **Markdown** card allows you to write any text. You can style it
