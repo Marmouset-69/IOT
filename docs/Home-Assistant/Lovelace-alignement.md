@@ -52,10 +52,8 @@ grid-template-areas: /
 type: custom:layout-card
 layout_type: custom:grid-layout
 layout:
-    grid-template-columns: 40% auto
-    grid-template-areas: |
-    "zone1 zoneV"
-    "zone2 zoneV"
+  grid-template-columns: 40% auto
+  grid-template-areas: / "zone1 zoneV" "zone2 zoneV"
 cards:
   - type: entity
     entity: sensor.bureau_dht22_temperature
