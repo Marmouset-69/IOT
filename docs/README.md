@@ -2,8 +2,6 @@
 **Keywords**: Home Assitant, Lovelace, Tasmota, Shelly, Qubino, ESP8268, ESP01, PZEM 004T, DHT22, PIR, MQTT, Intel NUC
 Try
 
-Test if it works
-
 
 <p style="margin-left: auto; margin-right: auto;width: 300px">
     <br><br><br>
