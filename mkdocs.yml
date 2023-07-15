@@ -1,7 +1,7 @@
 site_name: IOT
 theme:
   icon:
-      logo: fontawesome-solid-cat
+      logo: fontawesome/solid/bug
   name: material
   features:
       - content.code.annotate
