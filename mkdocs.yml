@@ -1,7 +1,7 @@
 site_name: IOT
 theme:
   icon:
-      logo: fontawesome/solid/bug
+      logo: fontawesome-solid-cat
   name: material
   features:
       - content.code.annotate
@@ -18,7 +18,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-  
+
 
 extra_css:
     - stylesheets/extra.css
