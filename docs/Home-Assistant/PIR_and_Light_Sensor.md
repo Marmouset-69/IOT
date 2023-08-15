@@ -1,8 +1,18 @@
 # ESPHome PIR and Light sensor to light up a LED ribbon plugged into a Tasmota Smart Plug
 
-See [Instructables pages](https://www.instructables.com/ESPHome-Wireless-PIR-and-Light-Sensor/)
+See [Instructables pages](https://www.instructables.com/ESPHome-Wireless-PIR-and-Light-Sensor/) as an example
 
-## PIR sensor HC-SR501
+## Material
+- ESP8266 D1 mini
+- PIR sensor HC-SR501
+- resistance 10k
+- photoresistor
+- relay SRD-05VDC-SL-C
+
+### ESP8266
+![](Images/PIR_and_Light_Sensor/ESP82566-D1-MINI-GPIO.png){ width="500" }
+
+### PIR sensor HC-SR501
 
 ![](../Control-screen/Images/sr501-pir-3.jpg){ width="190" }
 ![](../Control-screen/Images/sr501-pir-1.jpg){ width="140" }
@@ -14,7 +24,12 @@ See [Instructables pages](https://www.instructables.com/ESPHome-Wireless-PIR-and
 
 Delay is (from left to right) 10s, 1000s (1'30'') and 2100s (3'30'')
 
-## Wire
+### relay SRD-05VDC-SL-C
+
+![](Images/PIR_and_Light_Sensor/SRD-05VDC-SL-C.jpg){ width="200" }
+
+
+## Wire to use a Tasmota Plug (bad solution, Tasmota plug is dead after several months! - see below)
 
 ![](Images/PIR_and_Light_Sensor/2023-03-15_17-27-39.png){ width="400" }
 
@@ -29,6 +44,18 @@ Delay is (from left to right) 10s, 1000s (1'30'') and 2100s (3'30'')
 
 !!! warning
     Be careful to put the led ribbon in the right direction. The current only flows in one direction.
+!!! danger
+    After several months the Tasmota plug died (another too). So I decided to put a relay instead of the plug.
+
+## Wire with a relay
+
+The wire of the photoresistor and the presence detector is the same in the first version.
+
+![](Images/PIR_and_Light_Sensor/IMG_1595.jpg){ width="280" }
+![](Images/PIR_and_Light_Sensor/IMG_1596.JPG){ width="210" }
+
+![](Images/PIR_and_Light_Sensor/IMG_1597.jpg){ width="300" }
+![](Images/PIR_and_Light_Sensor/IMG_1598.JPG){ width="223" }
 
 ## ESPHome configuration
 ```yaml
@@ -76,6 +103,11 @@ binary_sensor:
       pin: GPIO2
       name: "Entrée PIR"
       device_class: motion
+
+switch:
+    - platform: gpio
+      pin: GPIO4  # D2
+      name: "Relais led"
 ```
 
 ## Automations
@@ -86,7 +118,7 @@ binary_sensor:
 ![](Images/PIR_and_Light_Sensor/2023-03-11_22-25-17.png){ width="400" }
 ![](Images/PIR_and_Light_Sensor/2023-03-11_22-25-38.png){ width="400" }
 
-![](Images/PIR_and_Light_Sensor/2023-03-11_22-25-55.png){ width="400" }
+![](Images/PIR_and_Light_Sensor/2023-08-15_16-59-11.png){ width="400" }
 
 ```yaml
 alias: Extérieur PIR détection -> ON
@@ -106,8 +138,8 @@ condition:
       below: 100
 action:
     - type: turn_on
-      device_id: f531fa200093b0b1467237c61076a741
-      entity_id: switch.exterieur_tasmota
+      device_id: 06fe698bfc80ec28f1d76a6c2d55dd5a
+      entity_id: bfeec1684104b5ba17dff785b2b33d11
       domain: switch
 mode: single
 ```
@@ -115,7 +147,7 @@ mode: single
 ## Turn OFF when motion is not detected
 
 ![](Images/PIR_and_Light_Sensor/2023-03-11_22-26-30.png){ width="400" }
-![](Images/PIR_and_Light_Sensor/2023-03-11_22-26-49.png){ width="400" }
+![](Images/PIR_and_Light_Sensor/2023-08-15_17-02-07.png){ width="400" }
 
 ```yaml
 alias: Extérieur PIR non détecté -> OFF
@@ -128,8 +160,8 @@ trigger:
 condition: []
 action:
     - type: turn_off
-      device_id: f531fa200093b0b1467237c61076a741
-      entity_id: switch.exterieur_tasmota
+      device_id: 06fe698bfc80ec28f1d76a6c2d55dd5a
+      entity_id: bfeec1684104b5ba17dff785b2b33d11
       domain: switch
 mode: single
 ```
