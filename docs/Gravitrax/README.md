@@ -1,3 +1,78 @@
+# Wifi - web server
+
+### D1 mini V4.0.0
+Official doc : [https://www.wemos.cc/en/latest/d1/d1_mini.html](https://www.wemos.cc/en/latest/d1/d1_mini.html)
+
+![](../Gravitrax/Images/d1_mini_v4_recto.png){ width="200" }
+![](../Gravitrax/Images/d1_mini_v4_verso.png){ width="200" }
+
+### IDE Arduino config.
+![](../Gravitrax/Images/D1-mini-IDE.jpg){ width="300" }
+
+### Simple code
+This code comes from the site [https://siytek.com/wemos-d1-mini-web-server/](https://siytek.com/wemos-d1-mini-web-server/)
+
+```C
+#include <ESP8266WiFi.h>
+#include <ESP8266WebServer.h>
+
+// Set WiFi credentials
+#define WIFI_SSID "YOUR_SSID"
+#define WIFI_PASS "YOUR_PASSWORD"
+
+    // Create a new web server
+    ESP8266WebServer webserver(80);
+
+// Handle Root
+void rootPage() {
+  webserver.send(200, "text/plain", "It work's!!!");
+}
+
+// Handle 404
+void notfoundPage(){
+  webserver.send(404, "text/plain", "404: Not found");
+}
+
+void setup()
+{
+  // Setup serial port
+  Serial.begin(115200);
+  Serial.println();
+
+  //Begin WiFi
+  WiFi.begin(WIFI_SSID, WIFI_PASS);
+  while (WiFi.status() != WL_CONNECTED) { delay(100); }
+
+  // WiFi Connected
+  Serial.print("Connected! IP address: ");
+  Serial.println(WiFi.localIP());
+
+  // Start Web Server
+  webserver.on("/", rootPage);
+  webserver.onNotFound(notfoundPage);
+  webserver.begin();
+
+}
+
+// Listen for HTTP requests
+void loop(void){
+  webserver.handleClient();
+}
+```
+### Use REST API
+Install [https://www.arduino.cc/reference/en/libraries/arest/](https://www.arduino.cc/reference/en/libraries/arest/)
+To use ESP8266 (here D1 mini), add a specific module (see below the excerpt from the documentation)
+!!! info 
+    **For ESP8266 (here D1 mini) add a new module:**
+
+    *For WiFi using the ESP8266 chip*
+
+    To use the library with the ESP8266 WiFi chip you will need to install the required module from the Boards Manager of the Arduino IDE. These are the steps to install the ESP8266 package inside the Arduino IDE:
+
+    Start the Arduino IDE and open the Preferences window
+    Enter http://arduino.esp8266.com/stable/package_esp8266com_index.json into the Additional Board Manager URLs field. You can add multiple URLs, separating them with commas.
+    Open the Boards Manager from Tools > Board menu and install the esp8266 package (and after that don't forget to select your ESP8266 board from Tools > Board menu).
+
 # Nano NRF24
 
 Don't Work because there only one bidirectionnal node (nomber 0).
