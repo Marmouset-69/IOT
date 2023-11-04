@@ -9,56 +9,81 @@ Official doc : [https://www.wemos.cc/en/latest/d1/d1_mini.html](https://www.wemo
 ### IDE Arduino config.
 ![](../Gravitrax/Images/D1-mini-IDE.jpg){ width="300" }
 
-### Simple code
-This code comes from the site [https://siytek.com/wemos-d1-mini-web-server/](https://siytek.com/wemos-d1-mini-web-server/)
+### Piezo sensor - bip!
+![](../Gravitrax/Images/2023-11-04_09-24-43.png){ width="400" }
 
 ```C
-#include <ESP8266WiFi.h>
-#include <ESP8266WebServer.h>
+#define pinPiezo 0
 
-// Set WiFi credentials
-#define WIFI_SSID "YOUR_SSID"
-#define WIFI_PASS "YOUR_PASSWORD"
-
-    // Create a new web server
-    ESP8266WebServer webserver(80);
-
-// Handle Root
-void rootPage() {
-  webserver.send(200, "text/plain", "It work's!!!");
+void setup() {
+  // initialise les broches
+  pinMode(pinPiezo, OUTPUT);
 }
 
-// Handle 404
-void notfoundPage(){
-  webserver.send(404, "text/plain", "404: Not found");
+void bip(int note, int note_delay){
+  tone (pinPiezo, note);
+  delay(note_delay);
+  noTone(pinPiezo);
 }
-
-void setup()
-{
-  // Setup serial port
-  Serial.begin(115200);
-  Serial.println();
-
-  //Begin WiFi
-  WiFi.begin(WIFI_SSID, WIFI_PASS);
-  while (WiFi.status() != WL_CONNECTED) { delay(100); }
-
-  // WiFi Connected
-  Serial.print("Connected! IP address: ");
-  Serial.println(WiFi.localIP());
-
-  // Start Web Server
-  webserver.on("/", rootPage);
-  webserver.onNotFound(notfoundPage);
-  webserver.begin();
-
-}
-
-// Listen for HTTP requests
-void loop(void){
-  webserver.handleClient();
+void loop() {
+  bip(600,100);
+  bip(900,100);
+  delay(4000);
 }
 ```
+### Led
+See [https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink](https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink)
+
+![](../Gravitrax/Images/2023-11-04_09-44-17.png){ width="400" }
+
+``` C
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(2, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
+  delay(1000);                      // wait for a second
+  digitalWrite(LED_BUILTIN, LOW);   // turn the LED off by making the voltage LOW
+  delay(1000);                      // wait for a second
+}
+```
+
+### Servo
+
+See [https://docs.arduino.cc/learn/electronics/servo-motors](https://docs.arduino.cc/learn/electronics/servo-motors)
+
+![](../Gravitrax/Images/2023-11-04_10-40-44.png){ width="400" }
+
+``` C
+#include <Servo.h>
+
+Servo myservo;  // create servo object to control a servo
+// twelve servo objects can be created on most boards
+
+
+void setup() {
+  myservo.attach(15,500,2500);  // attaches the servo on GIO2 to the servo object
+}
+
+void SetPos(int pos){
+  myservo.write(pos);
+}
+void loop() {
+  SetPos(0);
+  delay(2000);
+  SetPos(45);
+  delay(2000);
+  SetPos(90);
+  delay(2000);
+  SetPos(180);
+  delay(2000);
+}
+```
+
 ### Use REST API
 Install [https://www.arduino.cc/reference/en/libraries/arest/](https://www.arduino.cc/reference/en/libraries/arest/)
 To use ESP8266 (here D1 mini), add a specific module (see below the excerpt from the documentation)
