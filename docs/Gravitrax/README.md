@@ -66,7 +66,7 @@ Servo myservo;  // create servo object to control a servo
 
 
 void setup() {
-  myservo.attach(15,500,2500);  // attaches the servo on GIO2 to the servo object
+  myservo.attach(15,500,2500);  // change
 }
 
 void SetPos(int pos){
@@ -81,6 +81,27 @@ void loop() {
   delay(2000);
   SetPos(180);
   delay(2000);
+}
+```
+### IR distance sensor
+
+![](../Gravitrax/Images/2023-11-04_11-32-16.png){ width="400" }
+
+``` C
+const int digital_pin = 12;
+const int analog_pin = A0;
+
+void setup(){
+  Serial.begin(9600);
+  pinMode(digital_pin,INPUT);
+}
+
+void loop(){
+  Serial.print("Analog Reading=");
+  Serial.print(analogRead(analog_pin));
+  Serial.print("\t Digital Reading=");
+  Serial.println(digitalRead(digital_pin));
+  delay(10);
 }
 ```
 
