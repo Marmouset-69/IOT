@@ -301,5 +301,36 @@ sleep-inactive-battery-type='blank'
 Save the file and restart the gdm service (or restart your system).
 
 
+# essai pour résoudre le problème HttpS
 
+```
+        from selenium import webdriver
+        import time
+
+        # Liste des URLs que vous souhaitez ouvrir
+urls = ["https://www.inria.fr", "https://www.tf1.fr", "https://www.papge.fr"]
+
+# Spécifiez le chemin du pilote GeckoDriver ici ou ajoutez-le au chemin
+# driver = webdriver.Firefox(executable_path="/chemin/vers/geckodriver")
+
+# Si le pilote est dans le chemin, vous pouvez simplement utiliser :
+driver = webdriver.Firefox()
+
+try:
+  # Ouvrir chaque URL dans le même onglet
+  for idx, url in enumerate(urls):
+    if idx > 0:
+      # Attendre 10 secondes entre les pages
+      time.sleep(5)
+
+      # Ouvrir l'URL dans Firefox
+      driver.get(url)
+
+except Exception as e:
+  print(f"Une erreur s'est produite : {e}")
+
+finally:
+  # Fermer le navigateur après l'exécution
+  driver.quit()
+```
 

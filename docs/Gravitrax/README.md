@@ -34,7 +34,7 @@ void loop() {
 ### Led
 See [https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink](https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink)
 
-![](../Gravitrax/Images/2023-11-04_09-44-17.png){ width="400" }
+![](../Gravitrax/Images/2023-11-04_22-26-48.png){ width="400" }
 
 ``` C
 // the setup function runs once when you press reset or power the board
@@ -104,6 +104,8 @@ void loop(){
   delay(10);
 }
 ```
+!!! warning
+    The digital pin (12) never goes to 1, no idea why!
 
 ### Use REST API
 Install [https://www.arduino.cc/reference/en/libraries/arest/](https://www.arduino.cc/reference/en/libraries/arest/)

@@ -13,9 +13,10 @@
 Servo myservo;  // create servo object to control a servo
 // twelve servo objects can be created on most boards
 
+#define PIN_SERVO 4
 
 void setup() {
-  myservo.attach(15,500,2500);  // attaches the servo on GIO2 to the servo object
+  myservo.attach(PIN_SERVO,500,2500);  // attaches the servo on GIO2 to the servo object
 }
 
 void SetPos(int pos){

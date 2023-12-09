@@ -1,15 +1,18 @@
-const int digital_pin = 12;
-const int analog_pin = A0;
+// IR distante
+
+#define PIN_DIGITAL_IR  4
+#define PIN_ANALOG_IR A0
 
 void setup(){
   Serial.begin(9600);
-  pinMode(digital_pin,INPUT);
+  pinMode(PIN_DIGITAL_IR,INPUT);
+  pinMode(PIN_ANALOG_IR,INPUT);
 }
 
 void loop(){
   Serial.print("Analog Reading=");
-  Serial.print(analogRead(analog_pin));
+  Serial.print(analogRead(PIN_ANALOG_IR));
   Serial.print("\t Digital Reading=");
-  Serial.println(digitalRead(digital_pin));
+  Serial.println(digitalRead(PIN_DIGITAL_IR));
   delay(10);
 }
