@@ -1,7 +1,7 @@
 // Bip via Piezo
 // 12/11/2023
 
-#define pinPiezo 0 
+#define pinPiezo 14
 
 
 void setup() {
@@ -16,6 +16,7 @@ void bip(int note, int note_delay){
 }
 void loop() {
    bip(600,100);
+   delay(500);
    bip(900,100);
-   delay(4000);
+   delay(500);
 }

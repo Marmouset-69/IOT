@@ -121,6 +121,36 @@ To use ESP8266 (here D1 mini), add a specific module (see below the excerpt from
     Enter http://arduino.esp8266.com/stable/package_esp8266com_index.json into the Additional Board Manager URLs field. You can add multiple URLs, separating them with commas.
     Open the Boards Manager from Tools > Board menu and install the esp8266 package (and after that don't forget to select your ESP8266 board from Tools > Board menu).
 
+
+
+# ESP8266 D1 mini
+
+!!! warning
+    Be sure you use the front side
+
+    ![](../Gravitrax/Images/2023-12-17_11-22-35.png){ width="400" }
+
+![](../Gravitrax/Images/2023-12-17_11-11-17.png){ width="400" }
+![](../Gravitrax/Images/IMG_2992.jpg){ width="240" }
+
+
+![](../Gravitrax/Images/IMG_3015.jpg){ width="240" }
+![](../Gravitrax/Images/IMG_3016.jpg){ width="240" }
+
+## Wire
+```
+#define PIN_LED 5
+#define PIN_DIGITAL_IR  12
+#define PIN_ANALOG_IR A0
+#define PIN_PIEZO 14
+#define PIN_SERVO 16
+```
+
+
+
+
+
+
 # Nano NRF24
 
 Don't Work because there only one bidirectionnal node (nomber 0).

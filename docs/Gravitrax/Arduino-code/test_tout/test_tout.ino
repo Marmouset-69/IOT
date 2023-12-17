@@ -1,22 +1,29 @@
 #include <Servo.h>
 
-#define TEST_LED
-#define TEST_PIEZO
+//#define TEST_LED
+//define TEST_PIEZO
 #define TEST_SERVO
 #define TEST_IR
 
-#define PIN_LED 5
-// #define LED_BUILTIN is the led on the board
+// CNC
+/*#define PIN_LED 5
+#define PIN_DIGITAL_IR  12
+#define PIN_ANALOG_IR A0
+#define PIN_PIEZO 14 //0
+#define PIN_SERVO 16 //4
+*/
 
+// Plaque verte
+#define PIN_LED 4
+#define PIN_DIGITAL_IR  12
+#define PIN_ANALOG_IR A0
 #define PIN_PIEZO 0
+#define PIN_SERVO 15 //4
 
-#define PIN_SERVO 4
 #define MIN_PULSE 500
 #define MAX_PULSE 2500
 Servo myservo;  // create servo object to control a servo
 
-//#define PIN_DIGITAL_IR  4
-#define PIN_ANALOG_IR A0
 
 void setup() {
   Serial.begin(9600);
@@ -77,7 +84,7 @@ void loop() {
 
 #ifdef TEST_PIEZO
   Serial.println("\n---- Test piezo ----");
-  int nb_repeat_piezo = 1;
+  int nb_repeat_piezo = 2;
   int duration_piezo = 1000;
   int tone1 = 600;
   int tone2 = 900;
@@ -126,27 +133,25 @@ void loop() {
 
     myservo.write(135);
     Serial.println(" -> 135°");
-    delay(duration_servo);
-
-    myservo.write(180);
-    Serial.println(" -> 180°");
-    delay(duration_servo);
-
-    myservo.write(0);
-    Serial.println(" -> 0°");
   }  
 #endif
 
 #ifdef TEST_IR
-  int duration = 4000;
+  int duration = 10000;
   int d = millis() + duration;
   Serial.print("Test IR during: ");
   Serial.println(duration);
   while(millis() < d) {
-    Serial.print("Analog Reading=");
-    Serial.println(analogRead(PIN_ANALOG_IR));
-//    Serial.print("\t Digital Reading=");
-//   Serial.println(digitalRead(PIN_DIGITAL_IR));
+    if(! digitalRead(PIN_DIGITAL_IR)) {
+      tone (PIN_PIEZO, 600);
+      delay(10);
+      noTone(PIN_PIEZO);
+
+      Serial.print("Analog Reading=");
+      Serial.print(analogRead(PIN_ANALOG_IR));
+      Serial.print("\t Digital Reading=");
+      Serial.println(digitalRead(PIN_DIGITAL_IR));
+    }
     delay(10);
   }
 #endif

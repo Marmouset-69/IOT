@@ -1,6 +1,6 @@
 // IR distante
 
-#define PIN_DIGITAL_IR  4
+#define PIN_DIGITAL_IR  12
 #define PIN_ANALOG_IR A0
 
 void setup(){
