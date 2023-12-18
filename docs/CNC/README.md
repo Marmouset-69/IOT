@@ -102,6 +102,52 @@ As write in https://www.baldengineer.com/kicad-to-x-carve-pcb-workflow.html clea
 - remove M0 lines
 - Remove M2 line at the end of the file
 
+### Here is a Python script to remove all files
+``` python
+# ChatGTP code ;-)
+# 17/12/2023
+
+import sys
+import shutil
+
+def remove_unwanted_lines(file_path):
+  # Dictionary of codes to be removed
+  removed_lines = {"M0", "M6", "G64", "M2"}
+
+  # Read lines from the input file
+  with open(file_path, 'r') as file:
+    lines = file.readlines()
+
+    # Filter out unwanted lines
+    filtered_lines = [line for line in lines if not any(line.strip().startswith(code) for code in removed_lines)]
+
+    # Write filtered lines back to the same file
+    with open(file_path, 'w') as file:
+      file.writelines(filtered_lines)
+
+    # Print the number of lines removed for each code
+    for code in removed_lines:
+      count = sum(1 for line in lines if line.strip().startswith(code))
+      print(f"{count} lines starting with {code} have been removed.")
+
+if __name__ == "__main__":
+  # Check if the correct number of command-line arguments is provided
+  if len(sys.argv) != 2:
+    print("Usage: python script.py input_file.gcode")
+    sys.exit(1)
+
+    # Get input file path from command-line arguments
+    input_file_path = sys.argv[1]
+
+    # Create a backup of the input file
+    backup_file_path = input_file_path + ".bak"
+    shutil.copyfile(input_file_path, backup_file_path)
+
+    # Call the function to remove unwanted lines
+    remove_unwanted_lines(input_file_path)
+
+```
+
 ## Zero!
 At each step, set the Z origine (with **probe**)
 

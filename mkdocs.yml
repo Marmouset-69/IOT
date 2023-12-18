@@ -6,6 +6,7 @@ theme:
   features:
       - content.code.annotate
       - toc.integrate
+      - navigation.tabs
 
 markdown_extensions:
   - admonition
