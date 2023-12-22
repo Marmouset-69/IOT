@@ -65,6 +65,36 @@ In my case, I put all my HTML files in `~/Bureau/` in particular `ìndex.html`
 In the directory `~/Bureau/` add the file `start_firefox.sh` with code:
 
 ``` bash title="~/Bureau/start_firefox.sh"
+
+#!/bin/bash
+
+urls=(\
+  "/home/hasen/Bureau/Web/index.html" \
+  "/home/hasen/Bureau/Web/index_webcam.html" \
+  "http://nuc.local:8123/ecran-cuisine/0?kiosk" \
+  "http://nuc.local:8123/ecran-cuisine-2/0?kiosk" \
+  "https://embed.waze.com/fr/iframe?zoom=14&lat=45.253203623014485&lon=5.878454741111851" )
+
+# Ouvre Firefox en arrière-plan
+firefox -kiosk &
+sleep 1
+
+while true
+do
+  for url in "${urls[@]}"
+  do
+    # Utilise xdotool pour simuler Ctrl+L (focus sur la barre d'adresse)
+    xdotool key ctrl+l
+    sleep 0.5
+    xdotool type "$url"
+    xdotool key Return
+
+    sleep 5
+  done
+done
+    
+
+
 #!/bin/bash
 
 # You have to put this little break, otherwise the first page of Firefox on all black. Maybe a bug?
