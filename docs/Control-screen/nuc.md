@@ -94,13 +94,12 @@ do
 done
     
 
-
+# Old code
 #!/bin/bash
-
 # You have to put this little break, otherwise the first page of Firefox on all black. Maybe a bug?
-sleep 3
+#sleep 3
 # I have install full version of firefox
-/opt/firefox/./firefox --kiosk index.html
+#/opt/firefox/./firefox --kiosk index.html
 ```
 than
 
@@ -122,8 +121,8 @@ Terminal=false
 Type=Application
 X-GNOME-Autostart-enabled=true
 ```
-!!! info
-    You can press ALT+F4 or CTRL+T keys together to close Firefox running in Kiosk Mode.
+!!! info "Quit kiosk mode"
+    You can press ALT+F4 Alt+F4 (or Mac : **fn + Cmd + F4**) to quit kiosk Mode.
 
 
 ## PIR detection
