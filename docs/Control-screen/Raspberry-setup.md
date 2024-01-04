@@ -77,8 +77,13 @@ sudo hostname -I
 
 ### Setup PIR sensor
 #### Wire
-![](Images/sr501-pir-3.jpg){ width="280" }
-![](Images/sr501-pir-1.jpg){ width="200" }
+![](Images/sr501-pir-3.jpg){ width="240" }
+![](Images/sr501-pir-1.jpg){ width="170" }
+
+### Time Delay Adjustment
+![](../Control-screen/Images/IMG_5728.jpg){ width="180" }
+![](../Control-screen/Images/IMG_5727.jpg){ width="190" }
+![](../Control-screen/Images/IMG_5729.jpg){ width="180" }
 
 #### Files
 

@@ -1,4 +1,6 @@
-#define PIN_LED 5
+// #define PIN_LED 14 // D5 = 14 -> buzzer
+#define PIN_LED 5 // D1 = 5 
+// 2 = led du D1 mini
 
 // the setup function runs once when you press reset or power the board
 void setup() {

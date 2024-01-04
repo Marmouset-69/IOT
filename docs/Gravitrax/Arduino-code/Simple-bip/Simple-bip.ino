@@ -1,7 +1,7 @@
 // Bip via Piezo
 // 12/11/2023
 
-#define pinPiezo 14
+#define pinPiezo 14 // D5 -> 14
 
 
 void setup() {

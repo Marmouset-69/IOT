@@ -1,7 +1,7 @@
 #include <Servo.h>
 
-//#define TEST_LED
-//define TEST_PIEZO
+#define TEST_LED
+#define TEST_PIEZO
 #define TEST_SERVO
 #define TEST_IR
 
@@ -14,11 +14,11 @@
 */
 
 // Plaque verte
-#define PIN_LED 4
-#define PIN_DIGITAL_IR  12
+#define PIN_LED 5 // D1 -> 5
+#define PIN_DIGITAL_IR  12 // D6 -> 12
 #define PIN_ANALOG_IR A0
-#define PIN_PIEZO 0
-#define PIN_SERVO 15 //4
+#define PIN_PIEZO 14 // D5 -> 14
+#define PIN_SERVO 16 // D0 -> 16
 
 #define MIN_PULSE 500
 #define MAX_PULSE 2500
@@ -142,17 +142,10 @@ void loop() {
   Serial.print("Test IR during: ");
   Serial.println(duration);
   while(millis() < d) {
-    if(! digitalRead(PIN_DIGITAL_IR)) {
-      tone (PIN_PIEZO, 600);
-      delay(10);
-      noTone(PIN_PIEZO);
-
-      Serial.print("Analog Reading=");
-      Serial.print(analogRead(PIN_ANALOG_IR));
-      Serial.print("\t Digital Reading=");
-      Serial.println(digitalRead(PIN_DIGITAL_IR));
-    }
-    delay(10);
+    Serial.print("Analog Reading=");
+    Serial.print(analogRead(PIN_ANALOG_IR));
+    Serial.print("\t Digital Reading=");
+    Serial.println(digitalRead(PIN_DIGITAL_IR));
   }
 #endif
 
