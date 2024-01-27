@@ -1,0 +1,48 @@
+18:07:08.555 MQT: stat/tasmota_escalier_2F9DA0/RESULT =
+{"Rule1":{"State":"OFF","Once":"OFF","StopOnError":"OFF","Length":114,"Free":397,
+"Rules":"on Switch1#state=1 do publish stat/%topic%/PIR1 ON endon
+on Switch1#state=0 do Publish stat/%topic%/PIR1 OFF endon"}}
+
+
+
+Rule2
+ON analog#a0>900 DO publish stat/%topic%/photoresistor %value% ENDON
+ON analog#a0<=900 DO publish stat/%topic%/photoresistor %value% ENDON
+
+
+
+Rule2
+  ON analog#a0>%var1% DO
+    Backlog var1 %value%;
+            publish stat/%topic%/photoresistor %value%;
+            var2 %value%;
+            add1 10;
+            sub2 10;
+  ENDON
+
+  ON analog#a0<%var2% DO
+    Backlog var2 %value%;
+            publish stat/%topic%/photoresistor %value%;
+            var1 %value%;
+            add1 10;
+            sub2 10;
+  ENDON
+  
+  
+  
+Rule2 ON analog#a0>%var1% DO
+Backlog var1 %value%;
+        publish stat/%topic%/photoresistor %value%;
+        var2 %value%;
+        add1 2;
+        sub2 2;
+ENDON
+
+ON analog#a0<%var2% DO
+Backlog var2 %value%;
+        publish stat/%topic%/photoresistor %value%;
+        var1 %value%;
+        add1 2;
+        sub2 2;
+ENDON
+Rule2 1
