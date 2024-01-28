@@ -1,0 +1,61 @@
+/*
+  01/11/2023
+  Code inspired by :
+  Fichier:      HelloWorldNRF24L01-Emetteur
+  Description:  Emission d'un "Hello World" via un NRF24L01
+  Auteur:       Passion-Électronique
+  Librairie utilisée : https://github.com/nRF24/RF24
+*/
+
+#include <SPI.h>
+#include <RF24.h>
+
+#define pinCSN  7             // On associe la broche "CSN" du NRF24L01 à la sortie digitale D7 de l'arduino
+#define pinCE   8           // On associe la broche "CE" du NRF24L01 à la sortie digitale D8 de l'arduino
+#define tunnel  "PIPE1"       // On définit un "nom de tunnel" (5 caractères), pour pouvoir communiquer d'un NRF24 à l'autre
+
+RF24 radio(pinCE, pinCSN);    // Instanciation du NRF24L01
+
+const byte adresse[6] = tunnel;               // Mise au format "byte array" du nom du tunnel
+const char message[] = "Hello World !!!";     // Message à transmettre à l'autre NRF24 (32 caractères maxi, avec cette librairie)
+
+#define LED_GREEN_PIN 5
+#define LED_YELLOW_PIN 6
+
+void setup() {
+  Serial.begin(9600);
+
+  Serial.println("Emeteur NRF24L01");
+
+  pinMode(LED_GREEN_PIN, OUTPUT);
+  pinMode(LED_YELLOW_PIN, OUTPUT);
+
+ for (int i=0; i < 2; i++) {
+    digitalWrite(LED_GREEN_PIN, HIGH);
+    delay(100);
+    digitalWrite(LED_GREEN_PIN, LOW);
+
+    digitalWrite(LED_YELLOW_PIN, HIGH);
+    delay(100);
+    digitalWrite(LED_YELLOW_PIN, LOW);
+    Serial.println(i); 
+  }
+  digitalWrite(LED_GREEN_PIN, HIGH);
+
+  radio.begin();                      // Initialisation du module NRF24
+  radio.openWritingPipe(adresse);     // Ouverture du tunnel en ÉCRITURE, avec le "nom" qu'on lui a donné
+  radio.setPALevel(RF24_PA_MIN);      // Sélection d'un niveau "MINIMAL" pour communiquer (pas besoin d'une forte puissance, pour nos essais)
+  radio.stopListening();              // Arrêt de l'écoute du NRF24 (signifiant qu'on va émettre, et non recevoir, ici)
+  }
+
+void loop() {
+  radio.write(&message, sizeof(message));     // Envoi de notre message
+  Serial.print(">> Send: ");
+  Serial.println(message);
+  delay(5000);
+  
+  // Led blink
+  digitalWrite(LED_YELLOW_PIN, HIGH);
+  delay(1);
+  digitalWrite(LED_YELLOW_PIN, LOW);
+}
