@@ -20,12 +20,12 @@ Flash Tasmota using a **Chrome** based browser for ESP82XX and ESP32
 
 ## Configuration of MQTT
 ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-20_14-52-34.png){ width="200" }
-![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-20_15-00-41.png){ width="140" }
+![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-20_15-00-41.png){ width="146" }
 
 !!! Info
     To find the MQTT settings, you can go to the MQTT configure on Homeassitant
 
-    ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-20_15-02-33.png){ width="200" }
+    ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-20_15-02-33.png){ width="210" }
     ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-20_15-02-47.png){ width="250" }
 
     ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-20_15-02-58.png){ width="250" }
@@ -140,13 +140,13 @@ mqtt:
     Don't select DHT11 but use **AM2301**
 
 ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-21_14-29-43.png){ width="240" }
-![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-21_14-30-00.png){ width="220" }
+![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-21_14-30-00.png){ width="224" }
 
 ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-21_14-30-21.png){ width="450" }
 
 
 
-### Graph with *custom:apexcharts-card* and *type: custom:mini-graph-card*
+## Graph with *custom:apexcharts-card* and *type: custom:mini-graph-card*
 ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-27_15-24-34.png){ width="350" }
 ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-27_15-25-00.png){ width="266" }
 
@@ -240,7 +240,7 @@ Turns ON the LED grid if movement is detected and there is not enough light
 
 ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-28_17-25-07.png){ width="300" }
 
-Turns off the LED grid if the "detected" state changes to "not detected"
+Turns OFF the LED grid if the "detected" state changes to "not detected"
 
 ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-28_17-25-58.png){ width="300" }
 
