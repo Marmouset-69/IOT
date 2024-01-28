@@ -44,7 +44,8 @@ A new entity is automatically added to the MQTT list of entities already found (
 
 ## Add the LED grid - WS2812
 
-See: (tasmota.github.io/docs/Lights/)[https://tasmota.github.io/docs/Lights/]
+See: [tasmota.github.io/docs/Lights/](https://tasmota.github.io/docs/Lights/)
+
 ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-20_17-20-47.png){ width="200" }
 ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-20_18-00-38.png){ width="180" }
 
@@ -61,7 +62,7 @@ See: (tasmota.github.io/docs/Lights/)[https://tasmota.github.io/docs/Lights/]
 
 ## Add the Photoresistor
 
-See: (tasmota.github.io/docs/ADC/)[https://tasmota.github.io/docs/ADC/]
+See: [tasmota.github.io/docs/ADC/](https://tasmota.github.io/docs/ADC/)
 
 ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-20_19-10-20.png){ width="200" }
 ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-21_08-53-01.png){ width="550" }
@@ -128,7 +129,9 @@ mqtt:
     ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-24_15-21-56.png){ width="500" }
 
 ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-21_10-46-08.png){ width="700" }
+
 ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-21_10-47-44.png){ width="350" }
+
 
 
 ## Temperature sensor - DHT22
@@ -230,6 +233,20 @@ cards:
     font_size: 75
 
 ```
+
+## Automation
+
+Turns ON the LED grid if movement is detected and there is not enough light
+
+![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-28_17-25-07.png){ width="300" }
+
+Turns off the LED grid if the "detected" state changes to "not detected"
+
+![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-28_17-25-58.png){ width="300" }
+
 ## PCB - CNC
 
 ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-27_16-42-18.png){ width="266" }
+
+![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/IMG_3763.jpg){ width="200" }
+![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/IMG_3764.jpg){ width="190" }
