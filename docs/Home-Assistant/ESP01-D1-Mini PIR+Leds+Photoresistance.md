@@ -96,6 +96,8 @@ Rule1 1
 
 ## Motion sensor (PIR HCS-SR505)
 
+![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/hc-sr505-mini-pir-motion-sensor-detector-hcsr505-xyntacpro-1906-06-F1623233_2.jpg){ width="200" }
+
 See :[https://tasmota.github.io/docs/PIR-Motion-Sensors/#tasmota-settings](https://tasmota.github.io/docs/PIR-Motion-Sensors/#tasmota-settings)
 
 ![](Images/ESP01-D1-Mini PIR+Leds+Photoresistance/2024-01-21_07-45-43.png){ width="200" }
@@ -105,7 +107,8 @@ See :[https://tasmota.github.io/docs/PIR-Motion-Sensors/#tasmota-settings](https
 SwitchMode1 1
 SwitchTopic 0
 Rule2 on Switch1#state=1 do publish stat/%topic%/PIR1 ON endon on Switch1#state=0 do Publish stat/%topic%/PIR1 OFF endon
-Rule1 2
+Rule2 1
+Restart 1
 ```
 See [tasmota.github.io/docs/Home-Assistant/](https://tasmota.github.io/docs/Home-Assistant/)
 
