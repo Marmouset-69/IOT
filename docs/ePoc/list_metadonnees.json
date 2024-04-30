@@ -1,9 +1,9 @@
 [
   {
-    "id": "E006GE",
-    "download": "https://files.inria.fr/LearningLab_public/epocs_jmh/1er_GM/1ere_guerre-jmh.zip",
-    "title": "La Première Guerre XXX",
-    "image": "https://files.inria.fr/LearningLab_public/epocs_jmh/1er_GM/assets/_e441ff64_afbf_4921_ae72_0696fa0a2ff2.jpg",
+    "id": "E1erGM",
+    "download": "https://files.inria.fr/LearningLab_public/epocs_jmh/1er_GuerreMnodiale/1ere_guerre-jmh.zip",
+    "title": "La Première Guerre mondiale",
+    "image": "https://files.inria.fr/LearningLab_public/epocs_jmh/1er_GuerreMnodiale/assets/_e441ff64_afbf_4921_ae72_0696fa0a2ff2.jpg",
     "teaser": "",
     "thumbnail": "",
     "authors": [
@@ -21,5 +21,35 @@
     "chaptersCount": 3,
     "assessmentsCount": 7,
     "lastModified": "2023-11-23T07:27:57.487Z"
+  },
+  {
+    "id": "EGTFS",
+    "download": "https://files.inria.fr/LearningLab_public/epocs_jmh/GTFS/design_ton_GTFS.zip",
+    "title": "On a mis les données de transport dans vos poches",
+    "image": "https://files.inria.fr/LearningLab_public/epocs_jmh/GTFS/assets/1_p9rCrL_p5WZAytOPIUbdAQ.webp",
+    "teaser": "",
+    "thumbnail": "",
+    "authors": [
+      {
+        "name": "Arthur Sarazin",
+        "image": "https://files.inria.fr/LearningLab_public/epocs_jmh/GTFS/assets/07_arthur.png",
+        "title": "Chercheur R&D",
+        "description": ""
+      },
+      {
+        "name": "Laurane Coudriet",
+        "image": "https://files.inria.fr/LearningLab_public/epocs_jmh/GTFS/assets/photo1641292062_1_.jpeg",
+        "title": "Designeuse",
+        "description": ""
+      }
+    ],
+    "summary": "<p>Bienvenue dans l'ePoc Datactivist pour apprendre &agrave; cr&eacute;er vos donn&eacute;es de transports et les r&eacute;f&eacute;rencer...sur Google maps.</p>\n<p>Nous avons souhaiter tester ce format de mobile learning d&eacute;velopp&eacute; par l'INRIA. Pour en savoir plus sur les ePoc, consultez le site d&eacute;di&eacute; : https://epoc.inria.fr&nbsp;&nbsp;</p>",
+    "objectives": [
+      "Appréhender les notions d'open data, de données de transport et de format GTFS",
+      "Construire petit à petit un GTFS et comprendre la logique de construction de ce format "
+    ],
+    "chaptersCount": 8,
+    "assessmentsCount": 8,
+    "lastModified": "2023-11-15T20:19:12.984Z"
   }
 ]
