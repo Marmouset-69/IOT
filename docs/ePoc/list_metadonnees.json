@@ -26,7 +26,7 @@
     "id": "E-GTFS",
     "download": "https://files.inria.fr/LearningLab_public/epocs_jmh/GTFS/design_ton_GTFS.zip",
     "title": "On a mis les données de transport dans vos poches",
-    "image": "https://files.inria.fr/LearningLab_public/epocs_jmh/GTFS/assets/1_p9rCrL_p5WZAytOPIUbdAQ.png",
+    "image": "https://files.inria.fr/LearningLab_public/epocs_jmh/GTFS/assets/1_p9rCrL_p5WZAytOPIUbdAQ.webp",
     "teaser": "",
     "thumbnail": "",
     "authors": [
@@ -50,6 +50,6 @@
     ],
     "chaptersCount": 8,
     "assessmentsCount": 8,
-    "lastModified": "2024-04-30T15:01:27.537Z"
+    "lastModified": "2023-11-15T20:19:12.984Z"
   }
 ]
