@@ -1,0 +1,25 @@
+[
+  {
+    "id": "E006GE",
+    "download": "https://files.inria.fr/LearningLab_public/epocs_jmh/1er_GM/1ere_guerre-jmh.zip",
+    "title": "La Première Guerre mondiale",
+    "image": "https://files.inria.fr/LearningLab_public/epocs_jmh/1er_GM/assets/_e441ff64_afbf_4921_ae72_0696fa0a2ff2.jpg",
+    "teaser": "",
+    "thumbnail": "",
+    "authors": [
+      {
+        "name": "Bruno Morand",
+        "image": "",
+        "title": "",
+        "description": ""
+      }
+    ],
+    "summary": "<p>Les points les plus importants du chapitre d'Histoire en quelques minutes&hellip;</p>",
+    "objectives": [
+      "Réactiver les connaissances acquises, n’importe quand, aussi souvent qu’on veut !"
+    ],
+    "chaptersCount": 3,
+    "assessmentsCount": 7,
+    "lastModified": "2023-11-23T07:27:57.487Z"
+  }
+]
