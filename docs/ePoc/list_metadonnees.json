@@ -51,5 +51,28 @@
     "chaptersCount": 8,
     "assessmentsCount": 8,
     "lastModified": "2023-11-15T20:19:12.984Z"
+  },
+  {
+    "id": "E-MICRO",
+    "download": "https://files.inria.fr/LearningLab_public/epocs_jmh/Microapp/Microapprentissage-jmh.zip",
+    "title": "Micro-apprentissages",
+    "image": "https://files.inria.fr/LearningLab_public/epocs_jmh/Microapp/assets/classe.jpg",
+    "teaser": "",
+    "thumbnail": "",
+    "authors": [
+      {
+        "name": "Bertrand Ch",
+        "image": "https://files.inria.fr/LearningLab_public/epocs_jmh/Microapp/assets/f1.png",
+        "title": "Chargé de projet, DRANE",
+        "description": "<p>Charg&eacute; de projet, DRANE (Grenoble)</p>"
+      }
+    ],
+    "summary": "<p>Le micro-apprentissage, dans quelles conditions est-il performant ?</p>",
+    "objectives": [
+      "Ne pas s'endormir"
+    ],
+    "chaptersCount": 3,
+    "assessmentsCount": 5,
+    "lastModified": "2023-11-23T07:41:36.654Z"
   }
 ]
