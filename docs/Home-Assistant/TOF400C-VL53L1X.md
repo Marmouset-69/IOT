@@ -1,6 +1,8 @@
-# TOF400C-VL53L1X
+# Time Of Flight TOF400C-VL53L1X
 
 ![](Images/VL53L1X/VL53L1X.jpeg){ width="200" }
+
+## Water level
 
 ```
 esphome:
