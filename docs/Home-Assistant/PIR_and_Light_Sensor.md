@@ -1,4 +1,5 @@
-# ESPHome PIR and Light sensor to light up a LED ribbon plugged into a Tasmota Smart Plug
+# PIR + Light sensor to light up a LED
+## ESPHome PIR and Light sensor to light up a LED ribbon plugged into a Tasmota Smart Plug
 
 See [Instructables pages](https://www.instructables.com/ESPHome-Wireless-PIR-and-Light-Sensor/) as an example
 
