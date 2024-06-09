@@ -1,5 +1,17 @@
 # Water tank monitoring (ESP01-D1-Mini + JSN SR04T ultrasonic sensor)
 
+
+!!! danger
+    IT DOESN'T WORK!
+
+    The waves from the ultrasonic sensor bounce back into the water tank, the values ​​are random!
+
+![](Images/Water-Tank-Ultrasonic/IMG_4603.JPG){ width="200" }
+![](Images/Water-Tank-Ultrasonic/IMG_4604.JPG){ width="200" }
+![](Images/Water-Tank-Ultrasonic/IMG_4605.JPG){ width="200" }
+![](Images/Water-Tank-Ultrasonic/IMG_4606.JPG){ width="200" }
+![](Images/Water-Tank-Ultrasonic/IMG_4607.JPG){ width="200" }
+
 See [Markus Haack](https://markus-haack.com/watertank-esphome/) page. It's very easy.
 
 ``` json
