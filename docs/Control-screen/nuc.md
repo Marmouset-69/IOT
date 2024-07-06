@@ -116,7 +116,7 @@ Create the file `vi $HOME/.config/autostart/jmh-firefox.desktop`
 Name=Script-jmh-start-firefox
 GenericName=A descriptive name
 Comment=Some description about your script
-Exec=/home/hasen/Bureau//home/hasen/Bureau/
+Exec=/home/hasen/Desktop/Papge/start_firefox.sh
 Terminal=false
 Type=Application
 X-GNOME-Autostart-enabled=true
