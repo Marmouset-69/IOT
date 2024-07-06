@@ -66,18 +66,23 @@ In the directory `~/Bureau/` add the file `start_firefox.sh` with code:
 
 ``` bash title="~/Bureau/start_firefox.sh"
 
-#!/bin/bash
-
 urls=(\
-  "/home/hasen/Bureau/Web/index.html" \
-  "/home/hasen/Bureau/Web/index_webcam.html" \
-  "http://nuc.local:8123/ecran-cuisine/0?kiosk" \
-  "http://nuc.local:8123/ecran-cuisine-2/0?kiosk" \
-  "https://embed.waze.com/fr/iframe?zoom=14&lat=45.253203623014485&lon=5.878454741111851" )
+"/home/hasen/Desktop/Papge/Web/index.html" \
+"/home/hasen/Desktop/Papge/Web/index_webcam.html" \
+"https://embed.waze.com/fr/iframe?zoom=14&lat=45.253203623014485&lon=5.878454741111851"
+"http://homeassistant.local:8123/ecran-temperatures/0?kiosk" \
+"http://homeassistant.local:8123/consommation-maison/0?kiosk")
 
 # Ouvre Firefox en arrière-plan
-firefox -kiosk &
-sleep 1
+
+sleep 5
+xdotool type "terminal"
+sleep 5
+xdotool key Return
+sleep 5
+xdotool type "firefox -kiosk"
+xdotool key Return
+sleep 15
 
 while true
 do
