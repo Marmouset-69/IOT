@@ -26,8 +26,8 @@ extra_css:
 
 extra:
   analytics:
-    provider: google
-    property: G-6N3YVSMMK9
+    provider: plausible
+    domain: plausible.kangapi.fr
 
 plugins:
     - glightbox:
@@ -45,3 +45,4 @@ plugins:
         caption_position: bottom
     - search
     - git-revision-date-localized
+    - material-plausible
