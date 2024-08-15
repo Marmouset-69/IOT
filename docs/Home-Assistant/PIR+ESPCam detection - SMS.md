@@ -1,5 +1,7 @@
 # Motion detection and sending a snapshot from an ESPcam
 
+Create the automation:
+(see [https://www.youtube.com/watch?v=6jkzy2Cv9Pk]())
 ```yaml
 alias: "ALERTE : motion detection - chaîne Hifi -> SMS"
 description: ""
