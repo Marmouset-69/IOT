@@ -22,6 +22,9 @@ esp32:
   framework:
     type: arduino
 
+web_server:
+  port: 80
+
 # Enable logging
 logger:
 
