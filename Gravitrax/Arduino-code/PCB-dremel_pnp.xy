@@ -1,0 +1,29 @@
+# Pick And Place List
+# Company=
+# Author=
+# eMail=
+#
+# Project=PCB-dremel
+# Date=21:55:43
+# CreatedBy=Fritzing 1.0.1rc.2023-09-04.CD-1653-0-8d480a18
+#
+#
+# Coordinates in mils, always center of component
+# Origin 0/0=Lower left corner of PCB
+# Rotation in degree (0-360, math. pos.)
+#
+RefDes,Description,Package,X,Y,Rotation,Side,Mount
+Description: resistance;capacitance;inductance;voltage;current;power;mpn;mn;
+Switch buzz,";;;;;;;;","",1365.79,2178.18,0,Top,MANUAL
+Commutateur 12v / 5v,";;;;;;;;","THT",2615.79,1278.18,0,Top,THT
+Led,";;;;;;;;","THT",2015.79,2028.18,0,Top,THT
+Piezo,";;;;;;;;","buzzer-12mm-ns-kit",1156.84,1859.71,0,Top,SMT
+IR,";;;;;;;;","THT",513.159,2716.32,90,Top,THT
+JP4,";;;;;;;;","molex-1x6_lock",695.789,728.183,-90,Top,SMT
+Servo 3.3v,";;;;;;;;","THT",2115.79,2478.18,-90,Top,THT
+Interrupteur,";;;;;;;;","tactile-pth",1304.79,3050.18,90,Top,SMT
+D1 mini V4,";;;;;;;;","",1265.79,791.064,0,Top,MANUAL
+5v to 3.3,";;;;;;;;","",1330.33,2575.34,0,Top,MANUAL
+5v,";;;;;;;;","THT",1465.79,3478.18,90,Top,THT
+R 202,";;;;;;;;","THT",2015.79,1428.18,0,Top,THT
+Servo 5V,";;;;;;;;","",2615.79,1778.18,0,Top,MANUAL
