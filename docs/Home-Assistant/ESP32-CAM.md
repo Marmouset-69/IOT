@@ -14,25 +14,33 @@
 
 Edit the code :
 ``` yaml
+substitutions:
+  friendly_name: C10 # For Camera 10
+
 esphome:
-  name: esp32-cam-5
+  name: esp32-cam-10
+  friendly_name: "$friendly_name"
+  comment: "Chaîne hifi [86]"
 
 esp32:
   board: esp32dev
   framework:
     type: arduino
 
-web_server:
-  port: 80
-
 # Enable logging
 logger:
 
+web_server:
+  port: 80
+
 # Enable Home Assistant API
 api:
+  encryption:
+    key: "mHC1rZ/k6zqfQwyubbZW+/uKjERLis7Yw+Jz7CsP+II="
 
 ota:
-  password: "7178cc19180874c5bd1aaf8cac96abbd"
+  - platform: esphome
+    password: "dfdb90983a7302436f4a15c3860b94f3"
 
 wifi:
   ssid: !secret wifi_ssid
@@ -40,14 +48,16 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Esp32-Cam-5 Fallback Hotspot"
-    password: "nm87iYcQoqcp"
+    ssid: "Esp32-Cam-10 Fallback Hotspot"
+    password: "k3c3uU9cotdz"
 
 captive_portal:
+
+
 # Configuration for Ai-Thinker Camera
 # https://esphome.io/components/esp32_camera.html#configuration-for-ai-thinker-camera
 esp32_camera:
-  name: "ESP32-cam-5"
+  name: "$friendly_name"
   external_clock:
     pin: GPIO0
     frequency: 20MHz
@@ -61,18 +71,62 @@ esp32_camera:
   power_down_pin: GPIO32
   # Image settings
   max_framerate: 10 fps    # default: 10 fps, max 60
-  idle_framerate: 0.2 fps # default: 0.1 fps - framerate for 'picture' in HA dashboard
+  idle_framerate: 0.1 fps # default: 0.1 fps - framerate for 'picture' in HA dashboard
   resolution: 1024x768     # default: 640x480 (VGA) - higher res requires more memory
   jpeg_quality: 10        # 10 (best) to 63 (worst)
+  vertical_flip: False
+  horizontal_mirror: False
+  contrast: 0 # default: 0, variable -2 to 2
+  brightness: 2 # default: 0, variable -2 to 2
+  saturation: 0 # default: 0, variable -2 to 2
+
+# Server video/pictures, https://esphome.io/components/esp32_camera_web_server.html
+esp32_camera_web_server:
+  - port: 8080
+    mode: stream
+  - port: 8081
+    mode: snapshot
+
+time:
+  - platform: homeassistant
+    id: homeassistant_time
 
 switch:
   - platform: gpio
-    name: "ESP32-cam-5 flash"
+    name: "$friendly_name Flash"
     pin: 4
     #inverted: True
   - platform: restart
-    name: "ESP32-cam-5 - Restart"
+    name: "$friendly_name Restart"
     id: restart_switch
+
+# Example configuration entry with 2 sensors and filter
+sensor:
+  - platform: wifi_signal # Reports the WiFi signal strength/RSSI in dB
+    name: "$friendly_name WiFi Signal dB"
+    id: wifi_signal_db
+    update_interval: 60s
+    entity_category: "diagnostic"
+
+  - platform: copy # Reports the WiFi signal strength in %
+    source_id: "wifi_signal_db"
+    name: $friendly_name WiFi Signal Percent
+    filters:
+      - lambda: return min(max(2 * (x + 100.0), 0.0), 100.0);
+    unit_of_measurement: "Signal %"
+    entity_category: "diagnostic"
+    device_class: ""
+
+  - platform: uptime
+    name: "$friendly_name Uptime"
+
+text_sensor:
+  - platform: version
+    name: "$friendly_name ESPHome Version"
+  - platform: wifi_info
+    ssid:
+      name: "$friendly_name WiFi"
+      
 ```
 Select **Manual download**
 
