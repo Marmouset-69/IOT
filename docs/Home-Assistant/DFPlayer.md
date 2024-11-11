@@ -6,6 +6,34 @@
 
 ![](Images/DFPlayer/DFplayer-wire.png){ width="400" }
 
+## Audio Files
+
+### File Format:
+The DFPlayer only reads audio files in MP3 or WAV format. The files must be correctly named to be recognized (for example, 0001.mp3, 0002.mp3, etc.). The files must also be stored in the root of the SD card or in folders, but playback may be less reliable in subfolders.
+
+### SD Card Limits:
+The DFPlayer Mini supports microSD cards up to 32 GB, formatted in FAT16 or FAT32. It can manage up to 100 folders and 255 files per folder.
+
+### File Startup Time:
+MP3 files may take some time to start (a few hundred milliseconds), while WAV files start almost instantly. This can affect the user experience if a quick response is necessary.
+
+References:
+
+1. [Forum Arduino: Problème DFPlayer Mini](https://forum.arduino.cc/t/probleme-dfplayer-mini/1029879)
+
+2. [PICAXE Documentation](https://picaxe.com/docs/spe033.pdf)
+
+3. [DFPlayer Mini Cheat Sheet](https://reprage.com/posts/2018-05-08-dfplayer-mini-cheat-sheet/)
+
+5. [Wiki Débrouillard: DFPlayer Lecteur MP3](https://www.wikidebrouillard.org/wiki/Item:DFPlayer_Lecteur_MP3)
+
+6. [DFRobot Blog](https://www.dfrobot.com/blog-277.html)
+
+7. [AZ Delivery: MP3 Player Module](https://www.az-delivery.de/fr/products/mp3-player-modul)
+
+8. [TunePat: Download YouTube Music to SD](https://www.tunepat.fr/youtube-music/telecharger-youtube-music-sur-sd.html)
+
+## Configuration
 ``` yaml
 substitutions:
   friendly_name: Sound
