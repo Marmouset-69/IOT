@@ -1,8 +1,10 @@
-# DFPlayer Installation
+# DFPlayer Installation - ESP D1 Mini
 
 ![](Images/DFPlayer/IMG_6244.JPG){ width="200" }
 ![](Images/DFPlayer/IMG_6245.JPG){ width="200" }
 ![](Images/DFPlayer/IMG_6246.JPG){ width="200" }
+
+![](Images/DFPlayer/DFplayer-wire.png){ width="400" }
 
 ``` yaml
 substitutions:
@@ -15,7 +17,7 @@ esphome:
 
   on_boot:
       then:
-        - dfplayer.set_volume: 50
+        - dfplayer.set_volume: 15
 
 esp8266:
   board: esp01_1m
@@ -27,110 +29,146 @@ web_server:
 # Enable logging
 logger:
 
-uart:
-  rx_pin: GPIO13  # Pin de réception RX - D5
-  tx_pin: GPIO14  # Pin de transmission TX - D7
-  baud_rate: 9600  # Vitesse de transmission recommandée pour DFPlayer
+# WiFi sensors
+sensor:
+  # Sensor to measure the WiFi signal strength
+  - platform: wifi_signal
+    name: "Signal WiFi"
+    update_interval: 60s
+    filters:
+      - lambda: return x * 2; # Converts from dBm to approximate percentage
 
+  # Sensor to measure the uptime of the device
+  - platform: uptime
+    name: "Uptime"
+
+# Text sensors for network information
+text_sensor:
+  # Sensor to display the device's IP address
+  - platform: wifi_info
+    ip_address:
+      name: "IPAddress"
+
+  # Sensor to display the SSID of the connected WiFi network
+    ssid:
+      name: "WiFi SSID"
+
+  # Sensor to display the BSSID of the connected WiFi network
+    bssid:
+      name: "WiFi BSSID"
+
+# System status sensor to indicate if the device is online or offline
+binary_sensor:
+  - platform: status
+    name: "System Status"
+
+# UART configuration for communication with DFPlayer
+uart:
+  rx_pin: GPIO13  # RX pin - D5
+  tx_pin: GPIO14  # TX pin - D7
+  baud_rate: 9600  # Recommended baud rate for DFPlayer
+
+# DFPlayer configuration for audio playback functionality
 dfplayer:
   id: lecteur_musique
   on_finished_playback:
     then:
-      - logger.log: "Lecture terminée !"
+      - logger.log: "Playback finished!" # Log message when playback finishes
 
+# Volume control for DFPlayer using a number input
 number:
+  # Template number for controlling the volume of DFPlayer
   - platform: template
     name: "DFPlayer Volume"
     id: dfplayer_volume
-    min_value: 0
-    max_value: 30
-    step: 1
-    initial_value: 15
-    optimistic: true
+    min_value: 0          # Minimum volume level
+    max_value: 30         # Maximum volume level
+    step: 1               # Step size for volume adjustment
+    initial_value: 15     # Initial volume level when booting up
+    optimistic: true       # Indicates that changes will be applied immediately without confirmation
     set_action:
       - dfplayer.set_volume:
-          volume: !lambda "return x;"
+          volume: !lambda "return x;" # Set the volume based on user input
 
-
-# Enable Home Assistant API
+# Enable Home Assistant API for integration with Home Assistant services
 api:
   encryption:
     key: "XZap0RIQyPB3uwdZXxQRVnhjM9SfB9Ky5yLOVVXObnQ="
 
   actions:
-  - action: dfplayer_next
-    then:
-      - dfplayer.play_next:
-  - action: dfplayer_previous
-    then:
-      - dfplayer.play_previous:
-  - action: dfplayer_play
-    variables:
-      file: int
-    then:
-      - dfplayer.play: !lambda 'return file;'
+    # Action to play the next track on DFPlayer
+    - action: dfplayer_next
+      then:
+        - dfplayer.play_next:
 
-i2c:
-  sda: GPIO00
-  scl: GPIO02
+    # Action to play the previous track on DFPlayer
+    - action: dfplayer_previous
+      then:
+        - dfplayer.play_previous:
 
-display:
-  - platform: ssd1306_i2c
-    model: "SSD1306 128x64"
-    address: 0x3C
-    lambda: |-
-      it.printf(0, 0, id(my_font), "Hello, World!");
+    # Action to play a specific track based on file number input
+    - action: dfplayer_play
+      variables:
+        file: int                # Variable to hold the track number
+      then:
+        - dfplayer.play: !lambda 'return file;'
 
-font:
-  - file: "gfonts://Roboto"
-    id: my_font
-    size: 12
-
+# Button configuration for user interactions with DFPlayer and system controls
 button:
-  - platform: template
-    name: "Lecture DFPlayer"
-    on_press:
-      - dfplayer.play: 1  # Démarrer la lecture de la première piste
+  # Button to restart the device
+  - platform: restart
+    name: "Restart"
 
+  # Button to start playing the first track on DFPlayer
   - platform: template
-    name: "Pause DFPlayer"
+    name: "Play"
+    on_press:
+      - dfplayer.play: 1  # Start playing the first track
+
+  # Button to pause playback on DFPlayer
+  - platform: template
+    name: "Pause"
     on_press:
       - dfplayer.pause
 
+  # Button to play the next track on DFPlayer
   - platform: template
-    name: "Suivant DFPlayer"
+    name: "Next"
     on_press:
       - dfplayer.play_next
 
+  # Button to play the previous track on DFPlayer
   - platform: template
-    name: "Précédent DFPlayer"
+    name: "Previous"
     on_press:
       - dfplayer.play_previous
 
+  # Button to increase the volume of DFPlayer
   - platform: template
     name: "Volume Up"
     on_press:
       - number.increment: dfplayer_volume
 
+  # Button to decrease the volume of DFPlayer
   - platform: template
     name: "Volume Down"
     on_press:
       - number.decrement: dfplayer_volume
 
+# OTA (Over-the-Air) update configuration
 ota:
   - platform: esphome
     password: "103356932a9be5ea3641f7e064907750"
 
 wifi:
-  ssid: !secret wifi_ssid
-  password: !secret wifi_password
+  ssid: !secret wifi_ssid           # WiFi SSID from secrets.yaml file
+  password: !secret wifi_password     # WiFi password from secrets.yaml file
 
+# Enable fallback hotspot (captive portal) in case wifi connection fails
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Esp8266-D1-Mini-205"
     password: "vrjnYjHgHhA4"
 
 captive_portal:
-
-
 ```
