@@ -64,7 +64,8 @@ sensor:
 
 ```
 ## Full code
-```
+
+``` yaml
 substitutions:
   friendly_name: DHT22-Cuisine  # A user-friendly name for the device and sensors
 
