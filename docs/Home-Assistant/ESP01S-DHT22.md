@@ -108,12 +108,12 @@ sensor:
     model: AM2302  # Specifies the sensor model
     pin: GPIO02    # GPIO pin to which the sensor is connected
     temperature:
-      name: "${friendly_name}-temperature"  # Sensor name for temperature readings
+      name: "${friendly_name} temperature"  # Sensor name for temperature readings
       id: temperature_sensor   # Adds an ID for reference in the template
       filters:
         - offset: -1.7  # Calibration offset for temperature
     humidity:
-      name: "${friendly_name}-humidite"  # Sensor name for humidity readings
+      name: "${friendly_name} humidite"  # Sensor name for humidity readings
       id: humidity_sensor  # Adds an ID for reference in the template
       filters:
         - offset: 0.0  # Calibration offset for humidity
@@ -121,7 +121,7 @@ sensor:
 
   # Sensor for Wi-Fi signal strength (RSSI) in dB
   - platform: wifi_signal
-    name: "$friendly_name WiFi Signal dB"  # Sensor name for Wi-Fi signal in dB
+    name: "${friendly_name} WiFi Signal dB"  # Sensor name for Wi-Fi signal in dB
     id: wifi_signal_db  # Unique ID for this sensor
     update_interval: 60s  # Updates every 60 seconds
     entity_category: "diagnostic"  # Marked as diagnostic in Home Assistant
@@ -129,7 +129,7 @@ sensor:
   # Sensor for Wi-Fi signal strength as a percentage
   - platform: copy
     source_id: "wifi_signal_db"  # Uses data from the Wi-Fi signal sensor
-    name: "$friendly_name WiFi Signal Percent"  # Name of the percentage sensor
+    name: "${friendly_name} WiFi Signal Percent"  # Name of the percentage sensor
     filters:
       - lambda: return min(max(2 * (x + 100.0), 0.0), 100.0);  # Formula to calculate percentage from dB
     unit_of_measurement: "Signal %"  # Measurement unit displayed as percentage
@@ -138,9 +138,9 @@ sensor:
 
   # Uptime sensor to monitor how long the device has been running
   - platform: uptime
-    name: "$friendly_name Uptime"  # Name of the uptime sensor
+    name: "${friendly_name} Uptime"  # Name of the uptime sensor
 
-# Heat Index Calculation Using Temperature and Humidity
+  # Heat Index Calculation Using Temperature and Humidity
   - platform: template
     name: "${friendly_name} Heat Index"  # Name for the calculated heat index
     unit_of_measurement: "°C"  # Unit of measurement for the heat index
@@ -163,13 +163,14 @@ sensor:
 text_sensor:
   # Sensor for the ESPHome version running on the device
   - platform: version
-    name: "$friendly_name ESPHome Version"  # Name of the version sensor
+    name: "${friendly_name} ESPHome Version"  # Name of the version sensor
 
   # Sensor for the Wi-Fi SSID the device is connected to
   - platform: wifi_info
     ssid:
-      name: "$friendly_name WiFi"  # Name of the Wi-Fi SSID sensor
-````
+      name: "${friendly_name} WiFi"  # Name of the Wi-Fi SSID sensor
+
+```
 
 ![](Images/ESP01-DHT22/2023-07-12_16-15-23.png){ width="320" }
 
