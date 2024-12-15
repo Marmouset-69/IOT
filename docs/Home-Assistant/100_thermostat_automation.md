@@ -135,3 +135,72 @@ days_to_show: 1
 
 ![](Images/Shelly+ZWT198/2024-12-15_09-30-34.png){ width="200" }
 
+## Visual Feedback with WLED
+
+![](Images/Shelly+ZWT198/what-is-LED-strip-lights.jpg){ width="300" }
+
+To enhance the usability of the heating system, a WLED addressable LED strip has been integrated to act as a visual indicator of the radiator’s state. This feature ensures that the heating status is always visible, even at a glance, reducing the risk of leaving the radiator on unintentionally.
+
+The WLED integration serves multiple purposes. First, it allows for a quick status check:
+
+- Red Light: Indicates that the radiator is actively heating.
+
+- Off: Confirms that the radiator has been manually or automatically turned off.
+
+```yaml
+alias: "ZWT198-SALON : Change WLED color based on ZWT198 thermostat"
+description: >-
+  Turns the WLED red when the thermostat is heating and either turns it blue
+  or off when the thermostat is idle.
+
+triggers:
+  # Trigger: Detect changes in the hvac_action attribute of the ZWT198 thermostat.
+  # This automation reacts when the thermostat switches between "heating"
+  # (active heating) and "idle" (not heating).
+  - entity_id: climate.zigbee_thermostat
+    attribute: hvac_action
+    trigger: state  # Trigger whenever hvac_action changes state.
+
+actions:
+  - choose:
+      # Action 1: Turn the WLED red when the thermostat is heating.
+      - conditions:
+          # Condition: Check if the ZWT198 thermostat's hvac_action is set to "heating".
+          - condition: state
+            entity_id: climate.zigbee_thermostat
+            attribute: hvac_action
+            state: heating
+        sequence:
+          # Sequence: Turn the WLED red at maximum brightness.
+          - target:
+              entity_id: light.salon_wled_2  # Target the WLED light entity.
+            data:
+              color_name: red  # Set the WLED color to red.
+              brightness: 255  # Set brightness to maximum.
+            action: light.turn_on  # Turn on the WLED.
+
+      # Action 2: Change the WLED behavior when the thermostat is idle.
+      - conditions:
+          # Condition: Check if the ZWT198 thermostat's hvac_action is set to "idle".
+          - condition: state
+            entity_id: climate.zigbee_thermostat
+            attribute: hvac_action
+            state: idle
+        sequence:
+          # Option 1: Turn the WLED blue at maximum brightness.
+          # Uncomment the following lines to make the WLED blue instead of turning it off.
+          # - target:
+          #     entity_id: light.salon_wled_2  # Target the WLED light entity.
+          #   data:
+          #     color_name: blue  # Set the WLED color to blue.
+          #     brightness: 255  # Set brightness to maximum.
+          #   action: light.turn_on  # Turn on the WLED.
+
+          # Option 2: Turn off the WLED entirely.
+          # By default, this option is enabled.
+          - service: light.turn_off
+            target:
+              entity_id: light.salon_wled_2  # Turn off the WLED.
+
+mode: single  # Ensure only one instance of the automation runs at a time.
+```
