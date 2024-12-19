@@ -135,6 +135,25 @@ days_to_show: 1
 
 ![](Images/Shelly+ZWT198/2024-12-15_09-30-34.png){ width="200" }
 
+## ZWT198 Thermostat Settings
+
+![](Images/ZWT198.jpg){ width="200" }
+
+**Programming Mode:**
+
+- **Set Time and Day:**
+  - Press and hold the "M" button for 3 to 5 seconds to adjust the current time and day settings.
+
+- **Activate Zigbee Pairing:**
+  - Press and hold the up arrow (▲) for 3 seconds to initiate Zigbee pairing mode.
+
+- **Child Lock:**
+  - Simultaneously press both the up (▲) and down (▼) arrows to enable or disable the child lock feature.
+
+- **Enter Time Slot Programming Mode:**
+  - Press the "M" button and the down arrow (▼) together to access the time slot programming mode.
+
+
 ## Visual Feedback with WLED
 
 ![](Images/Shelly+ZWT198/what-is-LED-strip-lights.jpg){ width="300" }
