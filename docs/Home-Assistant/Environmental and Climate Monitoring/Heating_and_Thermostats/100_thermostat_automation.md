@@ -223,3 +223,4 @@ actions:
 
 mode: single  # Ensure only one instance of the automation runs at a time.
 ```
+See https://www.hacf.fr/confort-gestion-chauffage/?utm_source=chatgpt.com
