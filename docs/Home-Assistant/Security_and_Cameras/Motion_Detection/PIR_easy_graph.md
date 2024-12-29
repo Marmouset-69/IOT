@@ -23,34 +23,34 @@ The configuration will use:
 type: custom:apexcharts-card
 experimental:
   color_threshold: true
-graph_span: 12h
+graph_span: 6h
 header:
-  title: PIR Motion Detection
+  title: Détection PIR - Salle à Manger
   show: true
 series:
-  - entity: binary_sensor.your_pir_sensor
+  - entity: binary_sensor.salle_a_manger_boule_esp8266_02_pir_sensor
     type: column
-    name: Detections
+    name: Détections
     group_by:
       func: max
       duration: 10min
-    transform: 'return x === "on" ? 1 : 0;'
+    transform: "return x === \"on\" ? 1 : 0.02;"
     color_threshold:
-      - value: 0
-        color: "#00FF00"  # Green for no motion
-      - value: 1
-        color: "#FF0000"  # Red for motion
+      - value: 0.1
+        color: green
+      - value: 0.9
+        color: orange
 apex_config:
   chart:
     type: bar
   plotOptions:
     bar:
-      columnWidth: "80%"  # Wider bars
+      columnWidth: 90%
   xaxis:
     type: datetime
     labels:
       show: true
-      format: "HH:mm"
+      format: HH:mm
   yaxis:
     show: false
   grid:
@@ -58,7 +58,7 @@ apex_config:
   tooltip:
     enabled: true
     x:
-      format: "HH:mm"
+      format: HH:mm
 ```
 
 ---
