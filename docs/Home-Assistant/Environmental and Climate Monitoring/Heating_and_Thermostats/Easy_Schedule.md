@@ -434,9 +434,16 @@ action:
       - service: light.turn_off
         target:
           entity_id: light.salon_wled_2
-      - service: climate.turn_off
+    default:
+      - target:
+          entity_id: light.salon_wled_2
+        action: light.turn_off
+        data: {}
+      - service: climate.set_hvac_mode
         target:
-          entity_id: climate.thermostat_amelie
+          entity_id: climate.thermostat_cuisine
+        data:
+          hvac_mode: "off"  # Éteint le thermostat
 ```
 
 
