@@ -40,6 +40,7 @@ plugins:
         auto_caption: false
         caption_position: bottom
         shadow: true  # Enable shadows around images
+        
 
     - search
     - git-revision-date-localized
