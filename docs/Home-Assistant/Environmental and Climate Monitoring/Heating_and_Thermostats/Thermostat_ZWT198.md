@@ -10,7 +10,7 @@ The **ZWT198** thermostat does not directly transmit its temperature to **Home A
 
    To confirm that the thermostat is publishing temperature data to the MQTT broker, we use **MQTT Explorer**. Connect to your broker and navigate to the topic corresponding to your thermostat, for example: `zigbee2mqtt/Zigbee Thermostat Living Room ZWT198`. Ensure that the message contains the key `local_temperature` with a numeric value.
 
-![MQTT Explorer interface showing the topic and temperature](Images/2025-01-03_10-36-39.png){ width="400" }<br>
+![MQTT Explorer interface showing the topic and temperature](Images/2025-01-03_10-36-39.png){ width="500" }<br>
    *Image of the **MQTT Explorer** interface displaying the relevant topic and the message containing the `local_temperature` key.*
 
 ### Add MQTT Sensor Configuration in Home Assistant
@@ -33,7 +33,7 @@ The **ZWT198** thermostat does not directly transmit its temperature to **Home A
 
    After restarting Home Assistant, go to **Developer Tools** > **States**. Search for the sensor named `sensor.living_room_temperature` and verify that its value matches the current temperature measured by the thermostat.
 
-   ![Home Assistant Developer Tools showing the temperature sensor](Images/2025-01-03_11-02-48.png){ width="500" }<br>
+   ![Home Assistant Developer Tools showing the temperature sensor](Images/2025-01-03_11-02-48.png){ width="600" }<br>
 
 ## Integrating the Temperature into a Home Assistant Card
 
@@ -58,5 +58,5 @@ hours_to_show: 24
 refresh_interval: 60
 ```
 
-![Temperature card in Home Assistant](Images/2025-01-03_11-11-35.png){ width="400" }
+![Temperature card in Home Assistant](Images/2025-01-03_11-11-35.png){ width="500" }
 
