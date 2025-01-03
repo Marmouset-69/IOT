@@ -1,3 +1,17 @@
+# Thermostat Automation with Custom Daily Schedules
+
+This mini-project aims to configure an intelligent system in Home Assistant to manage a thermostat located in a kitchen. The objective is to enable automatic control based on customized time slots while providing manual management through a user-friendly interface. The project is structured into several steps to ensure a flexible and intuitive setup.
+
+The first step is to define the time slots for each day of the week using `input_datetime` entities. Each day is assigned two time slots with specified start and end times. These entities allow for easy and precise customization of the periods during which the thermostat should be active, such as morning and afternoon.
+
+Next, `input_boolean` entities are associated with each time slot to enable or disable them. These switches allow flexible management directly from the Home Assistant user interface, without requiring modifications to the YAML configuration. They make it easy to temporarily or permanently deactivate a time slot based on specific needs.
+
+The third step involves automating the thermostat’s actions. These automations monitor the defined schedules and manage the thermostat's state autonomously. The thermostat automatically activates at the start of an active slot and deactivates at the end. If no slots are active, an automation ensures that the thermostat remains off, optimizing energy consumption.
+
+Finally, a custom card is created in the Lovelace interface to combine the display of current time slots and an interactive thermostat control button. The day’s time slots are displayed on a single line, formatted clearly and separated by "and." The button allows users to easily toggle between the thermostat's "heating" and "off" modes while visually reflecting its current state. This compact and intuitive card provides quick access to essential information and commands while seamlessly integrating into the Home Assistant dashboard.
+
+![thermostat](Images/2024-12-31_18-55-27.png){ width="600" }
+
 
 ``` yaml
 ## This code configures two time slots per day for each day of the week.
