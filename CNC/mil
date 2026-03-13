@@ -1,0 +1,62 @@
+# This is an example config file for pcb2gcode.
+# Rename this file "millproject" and place it in the same directory as your
+# gerber files to save typing
+# <option>=false is implicit, it is present just for clearness
+
+# pcb2gcode --back CNC-led_copperBottom.gbl --metricoutput 1 --zsafe 5 --zchange 5 --zwork -0.02 --offset 0.5 --mill-feed 50 --mill-speed 15000 --drill CNC-led_drill.txt --zdrill -0.05 --drill-feed=200 --drill-speed=30000 --nog81 --metric 1 --outline CNC-led_contour.gm1 --zcut -0.1
+
+# You may want to uncomment and change those in local project files (or you
+# can specify them directly as command line arguments)
+#front=board.front.gbr
+back=CNC-led_copperBottom.gbl
+outline=CNC-led_contour.gm1
+drill=CNC-led_drill.txt
+#preamble=preamble.ngc
+#preamble-text=preamble_text.txt
+#postamble=postamble.ngc
+
+# Common options
+metric=true
+metricoutput=true
+#mirror-absolute=false
+#optimise=true
+zchange=5.0000
+#zero-start=true
+zsafe=5.0000
+
+# Mill options
+#extra-passes=0
+#mill-feed=60
+#mill-speed=10000
+offset=0.5000
+#offset=20  # Uncomment (and comment the previous line) for voronoi regions
+zwork=-0.0500
+
+# Drill options
+drill-feed=200
+#drill-side=auto
+drill-speed=10000
+#milldrill=false
+nog81=true
+#onedrill=false
+zdrill=-0.05
+
+# Outline options
+#bridges=0.5000
+#bridgesnum=2
+cut-feed=600
+#cut-side=auto
+#cut-infeed=10.0000
+cut-speed=10000
+#cutter-diameter=3.0000
+#fill-outline=true
+#zbridges=-0.6000
+zcut=-0.01000
+
+# Autoleveller options
+#al-back=false
+#al-front=false
+#al-probefeed=100
+#al-x=15.0000
+#al-y=15.0000
+#software=LinuxCNC
