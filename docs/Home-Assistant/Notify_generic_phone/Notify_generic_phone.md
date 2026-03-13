@@ -37,7 +37,7 @@ actions:
     action: notify.{{ states('input_text.mon_telephone') }}
 ```
 
-``` configration.yaml
+```yaml configration.yaml
 input_text:
   mon_telephone:
     initial: "mobile_app_iphone_17_pro_max_papa"
