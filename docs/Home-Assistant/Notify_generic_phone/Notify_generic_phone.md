@@ -41,4 +41,4 @@ actions:
 input_text:
   mon_telephone:
     initial: "mobile_app_iphone_17_pro_max_papa"
- ```
+```
